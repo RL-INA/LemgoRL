@@ -1,0 +1,10 @@
+<tazs>
+    <taz id="1" edges="Gosebrede.N.7 Gosebrede.S.1">
+    </taz>
+    <taz id="2" edges="EntruperWeg.N.4 EntruperWeg.S.7">
+    </taz>
+	<taz id="3" edges="Richard-Wagner-Strasse.E.1 Richard-Wagner-Strasse.W.2">
+    </taz>
+	<taz id="4" edges="EntruperWeg.N.1 EntruperWeg.S.9">
+    </taz>
+</tazs>

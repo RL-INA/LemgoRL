@@ -1,0 +1,7 @@
+sigma; normal(0.5,0.2); [0.0,0.9]
+length; normal(4.4,0.2); [3.5,5.5]
+accel; normal(2.6,0.15); [2.3,3.0] 
+decel; normal(4.5,0.1); [4.4,4.8]
+minGap; normal(2.5,0.2); [2.3,3.3]
+vClass; passenger
+carFollowModel; Krauss

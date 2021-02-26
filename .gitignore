@@ -1,0 +1,45 @@
+
+# IDE
+.idea
+
+# Logs
+logs
+*.log
+
+#Backup files
+*bak
+
+# Simulation Logs
+Simulation Output*
+tripinfo.xml
+e2output.xml
+
+#Python Files
+__pycache__
+
+#Output
+results
+
+#envs
+createVehTypeDistribution.py
+duaIterate.py
+duaIterate_analysis.py
+pedestrianFlow.py
+randomTrips.py
+routeSampler.py
+jtcrouter.py
+Lemgo_manual_test.rou.xml
+Lemgo_test.rou.xml
+Lemgo_test.sumocfg
+.metadata
+Changelog.txt
+changed lines for indirect bike turning.txt
+sumo_signalgroups.net.xml
+lisum.xml
+github_repo.zip
+main.txt
+OmlFgServer
+Lemgo.net.xml
+OWL322
+apex.bat
+lisa_vissim_addon

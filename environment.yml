@@ -1,0 +1,34 @@
+name: ki4lsa
+channels:
+    - conda-forge
+dependencies:
+    - python=3.6
+    - bokeh
+    - ipywidgets=6.0.0
+    - tensorflow==1.14.0
+    - psutil
+    - nbserverproxy
+    - flask
+    - flask-cors
+    - setproctitle
+    - pip:
+        - ray
+        - ray[tune]
+        - ray[rllib]
+        - ray[debug]
+        - dm-tree
+        - setproctitle
+        - keras
+        - modin
+        - matplotlib
+        - bs4
+        - lxml
+        - scikit-learn
+        - setproctitle
+        - atoma
+        - gym
+        - scipy
+        - opencv-python
+        - openpyxl
+        - sumolib
+

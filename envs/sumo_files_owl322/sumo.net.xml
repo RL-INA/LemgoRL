@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 12.02.2021 16:53:47 by Eclipse SUMO netedit Version UNKNOWN
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="C:\KI4LSA\Code\sumo_files_lemgo_owl322\shrinked\sumo_shrinked12.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="C:\KI4LSA\Code\sumo_files_lemgo_owl322\shrinked\sumo_shrinked12.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-internal-links value="false"/>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<net version="1.6" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="-490613.69,-5763184.61" convBoundary="1894.78,1379.93,2422.85,1585.79" origBoundary="8.850560,52.014953,8.963454,52.044522" projParameter="+proj=utm +zone=32 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"/>
+
+    <edge id=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_0" function="internal">
+        <lane id=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_0_0" index="0" allow="pedestrian" speed="8.33" length="1.10" width="2.00" shape="2087.85,1469.42,105.00 2087.87,1470.52,105.00"/>
+        <lane id=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_0_1" index="1" allow="bicycle" speed="8.33" length="1.10" width="1.00" shape="2086.35,1469.41,105.00 2086.37,1470.51,105.00"/>
+        <lane id=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_0_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="1.10" width="2.50" shape="2084.60,1469.40,105.00 2084.62,1470.50,105.00"/>
+        <lane id=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_0_3" index="3" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="1.10" width="2.50" shape="2082.10,1469.39,105.00 2082.12,1470.48,105.00"/>
+    </edge>
+    <edge id=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_w0" function="walkingarea">
+        <lane id=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_w0_0" index="0" allow="pedestrian" speed="1.00" length="1.11" width="2.00" shape="2086.87,1470.51,105.00 2088.87,1470.53,105.00 2088.85,1469.42,105.00 2086.85,1469.41,105.00"/>
+    </edge>
+    <edge id=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_0" function="internal">
+        <lane id=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_0_0" index="0" allow="pedestrian" speed="8.33" length="0.86" width="2.00" shape="2074.58,1508.33,105.00 2074.69,1507.49,105.00"/>
+        <lane id=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_0_1" index="1" allow="bicycle" speed="8.33" length="0.86" width="1.00" shape="2076.07,1508.43,105.00 2076.18,1507.58,105.00"/>
+        <lane id=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_0_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="0.86" width="2.50" shape="2077.82,1508.56,105.00 2077.93,1507.70,105.00"/>
+        <lane id=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_0_3" index="3" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="0.86" width="2.50" shape="2080.31,1508.74,105.00 2080.42,1507.86,105.00"/>
+    </edge>
+    <edge id=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_w0" function="walkingarea">
+        <lane id=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_w0_0" index="0" allow="pedestrian" speed="1.00" length="0.85" width="2.00" shape="2075.68,1507.55,105.00 2073.69,1507.42,105.00 2073.58,1508.26,105.00 2075.58,1508.40,105.00"/>
+    </edge>
+    <edge id=":Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0" function="internal">
+        <lane id=":Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_0" index="0" allow="bicycle" speed="8.33" length="15.02" width="1.00" shape="2081.75,1423.86,106.00 2083.49,1428.15,106.00 2085.02,1431.03,106.00 2086.11,1433.98,106.00 2086.51,1438.48,106.00"/>
+        <lane id=":Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="15.02" width="2.50" shape="2081.03,1424.09,106.00 2082.58,1428.28,106.00 2083.76,1431.15,106.00 2084.51,1434.08,106.00 2084.76,1438.47,106.00"/>
+        <lane id=":Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="15.02" width="2.50" shape="2081.03,1424.09,106.00 2082.16,1428.22,106.00 2082.48,1431.15,106.00 2082.39,1434.14,106.00 2082.26,1438.46,106.00"/>
+    </edge>
+    <edge id=":Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0" function="walkingarea">
+        <lane id=":Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0_0" index="0" allow="pedestrian" speed="1.00" length="15.83" width="2.00" shape="2087.01,1438.48,106.00 2089.01,1438.49,106.00 2084.13,1423.10,106.00 2082.23,1423.71,106.00 2083.40,1426.83,106.00 2084.53,1429.10,106.00 2085.52,1430.96,106.00 2086.31,1432.84,106.00 2086.83,1435.20,106.00"/>
+    </edge>
+    <edge id=":Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0" function="internal">
+        <lane id=":Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_0" index="0" allow="bicycle" speed="13.89" length="10.21" width="1.00" shape="2011.44,1467.03,109.00 2014.34,1467.72,109.00 2016.46,1467.66,109.00 2018.58,1467.57,109.00 2021.53,1468.15,109.00"/>
+        <lane id=":Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_1" index="1" disallow="all" speed="13.89" length="10.21" width="2.50" shape="2011.44,1467.03,109.00 2014.15,1468.36,109.00 2015.81,1469.69,109.00 2017.48,1470.98,109.00 2020.23,1472.20,109.00"/>
+        <lane id=":Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="10.21" width="2.50" shape="2010.83,1468.67,109.00 2013.76,1469.37,109.00 2015.89,1469.32,109.00 2018.03,1469.22,109.00 2020.99,1469.82,109.00"/>
+        <lane id=":Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_3" index="3" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="10.21" width="2.50" shape="2010.83,1468.67,109.00 2020.23,1472.20,109.00"/>
+    </edge>
+    <edge id=":Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0" function="walkingarea">
+        <lane id=":Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0_0" index="0" allow="pedestrian" speed="1.00" length="10.10" width="2.00" shape="2021.68,1467.68,109.00 2022.30,1465.77,109.00 2012.30,1464.68,109.00 2011.61,1466.56,109.00 2013.67,1467.14,109.00 2015.26,1467.28,109.00 2016.62,1467.19,109.00 2017.99,1467.08,109.00 2019.59,1467.17,109.00"/>
+    </edge>
+    <edge id=":Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0" function="internal">
+        <lane id=":Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_0" index="0" allow="bicycle" speed="13.89" length="10.12" width="1.00" shape="2162.00,1502.70,104.00 2159.07,1502.42,104.00 2157.04,1502.64,104.00 2155.00,1502.91,104.00 2152.06,1502.80,104.00"/>
+        <lane id=":Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_1" index="1" disallow="all" speed="13.89" length="10.12" width="2.50" shape="2162.00,1502.70,104.00 2159.11,1501.75,104.00 2157.30,1500.53,104.00 2155.49,1499.36,104.00 2152.58,1498.58,104.00"/>
+        <lane id=":Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="10.12" width="2.50" shape="2162.31,1500.97,104.00 2159.36,1500.70,104.00 2157.31,1500.91,104.00 2155.25,1501.18,104.00 2152.27,1501.06,104.00"/>
+        <lane id=":Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_3" index="3" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="10.12" width="2.50" shape="2162.31,1500.97,104.00 2152.58,1498.58,104.00"/>
+    </edge>
+    <edge id=":Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0" function="walkingarea">
+        <lane id=":Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0_0" index="0" allow="pedestrian" speed="1.00" length="9.86" width="2.00" shape="2151.99,1503.29,104.00 2151.75,1505.28,104.00 2161.55,1505.16,104.00 2161.91,1503.19,104.00 2159.82,1502.93,104.00 2158.26,1502.96,104.00 2156.97,1503.14,104.00 2155.67,1503.34,104.00 2154.10,1503.44,104.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_0" index="0" allow="bicycle" speed="8.97" length="14.98" width="1.00" shape="2101.71,1496.58,104.99 2094.59,1496.18,104.99 2089.43,1497.00,105.00 2087.22,1498.40,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_1" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_1_0" index="0" allow="bicycle" speed="13.89" length="40.16" width="1.00" shape="2101.71,1496.58,104.99 2089.15,1495.26,104.99 2079.81,1494.39,104.99 2071.51,1493.11,105.00 2062.10,1490.54,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_2" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_2_0" index="0" allow="bicycle" speed="11.11" length="28.00" width="2.50" shape="2101.71,1496.58,104.99 2090.15,1496.31,104.99 2086.59,1497.22,104.99 2078.61,1498.36,104.99 2076.07,1498.43,104.99 2076.21,1496.27,104.99"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_3" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_3_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.85" length="19.26" width="2.50" shape="2101.91,1494.84,104.99 2093.51,1494.41,104.99 2087.44,1495.47,105.00 2083.69,1498.02,105.00 2083.64,1498.16,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_4" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_4_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="39.81" width="2.50" shape="2101.91,1494.84,104.99 2089.47,1493.54,104.99 2080.23,1492.70,105.00 2072.02,1491.44,105.00 2062.65,1488.88,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_5" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_5_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="7.24" width="2.50" shape="2102.20,1492.36,104.99 2095.11,1490.89,104.99"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_23" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_23_0" index="0" allow="bicycle" speed="8.97" length="4.63" width="1.00" shape="2087.22,1498.40,105.00 2086.23,1499.02,105.00 2084.99,1502.26,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_24" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_24_0" index="0" allow="bicycle" speed="11.11" length="20.25" width="2.50" shape="2076.21,1496.27,104.99 2076.45,1492.46,105.00 2079.30,1476.28,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_25" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_25_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.85" length="4.15" width="2.50" shape="2083.64,1498.16,105.00 2082.26,1502.07,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_26" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_26_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="23.36" width="2.50" shape="2095.11,1490.89,104.99 2092.21,1490.29,104.99 2085.06,1486.93,105.00 2080.76,1482.26,105.00 2079.30,1476.28,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_6" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_6_0" index="0" allow="bicycle" speed="10.15" length="18.16" width="1.00" shape="2086.33,1476.24,105.00 2087.33,1480.68,105.00 2090.39,1484.12,105.00 2095.52,1486.57,105.00 2098.78,1487.23,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_7" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_7_0" index="0" allow="bicycle" speed="8.33" length="26.05" width="1.00" shape="2086.33,1476.24,105.00 2084.99,1502.26,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_8" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_8_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="10.81" length="20.72" width="2.50" shape="2084.58,1476.25,105.00 2085.67,1481.37,105.00 2089.02,1485.33,105.00 2094.63,1488.13,105.00 2098.57,1488.94,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_9" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_9_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="25.92" width="2.50" shape="2084.58,1476.25,105.00 2082.26,1502.07,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_10" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_10_0" index="0" allow="bicycle" speed="10.21" length="1.92" width="1.00" shape="2081.33,1476.26,105.00 2081.04,1478.16,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_11" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_11_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="10.04" length="3.66" width="2.50" shape="2082.08,1476.27,105.00 2081.46,1479.88,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_27" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_27_0" index="0" allow="bicycle" speed="10.15" length="4.01" width="1.00" shape="2098.78,1487.23,105.00 2102.71,1488.02,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_28" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_28_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="10.81" length="4.02" width="2.50" shape="2098.57,1488.94,105.00 2102.51,1489.76,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_29" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_29_0" index="0" allow="bicycle" speed="10.21" length="27.76" width="1.00" shape="2081.04,1478.16,105.00 2080.06,1484.69,105.00 2076.42,1489.95,105.00 2070.42,1491.93,105.00 2062.10,1490.54,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_30" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_30_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="10.04" length="25.04" width="2.50" shape="2081.46,1479.88,105.00 2080.72,1484.23,105.00 2076.91,1488.90,105.00 2070.83,1490.41,105.00 2062.65,1488.88,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_12" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_12_0" index="0" allow="bicycle" speed="7.95" length="14.19" width="2.50" shape="2064.86,1482.14,105.00 2070.87,1483.44,105.00 2075.16,1482.90,105.00 2077.72,1480.51,105.00 2077.76,1480.29,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_13" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_13_0" index="0" allow="bicycle" speed="13.89" length="38.43" width="1.00" shape="2064.86,1482.14,105.00 2076.37,1485.30,105.00 2085.03,1486.64,105.00 2093.07,1487.20,105.00 2102.71,1488.02,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_14" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_14_0" index="0" allow="bicycle" speed="11.11" length="25.00" width="1.00" shape="2064.86,1482.14,105.00 2072.58,1483.84,105.00 2077.90,1482.33,105.00 2082.62,1480.98,105.00 2086.72,1481.10,105.00 2086.75,1483.65,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_15" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_15_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="8.58" length="16.68" width="2.50" shape="2064.32,1483.80,105.00 2070.90,1485.16,105.00 2075.59,1484.36,105.00 2078.39,1481.40,105.00 2078.59,1480.29,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_16" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_16_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="38.78" width="2.50" shape="2064.32,1483.80,105.00 2075.95,1487.00,105.00 2084.72,1488.36,105.00 2092.84,1488.93,105.00 2102.51,1489.76,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_17" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_17_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.85" length="7.93" width="2.50" shape="2063.53,1486.18,105.00 2070.91,1489.10,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_31" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_31_0" index="0" allow="bicycle" speed="7.95" length="4.08" width="2.50" shape="2077.76,1480.29,105.00 2078.55,1476.29,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_32" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_32_0" index="0" allow="bicycle" speed="11.11" length="18.69" width="1.00" shape="2086.75,1483.65,105.00 2086.75,1483.86,105.00 2085.94,1491.28,105.00 2084.99,1502.26,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_33" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_33_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="8.58" length="4.07" width="2.50" shape="2078.59,1480.29,105.00 2079.30,1476.28,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_34" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_34_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.85" length="18.25" width="2.50" shape="2070.91,1489.10,105.00 2071.93,1489.51,105.00 2077.85,1493.26,105.00 2081.29,1497.45,105.00 2082.26,1502.07,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_18" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_18_0" index="0" allow="bicycle" speed="10.10" length="15.32" width="1.00" shape="2076.56,1501.68,105.00 2075.81,1498.64,105.00 2073.15,1495.77,105.00 2068.58,1493.07,105.00 2065.83,1491.99,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_19" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_19_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="10.77" length="17.60" width="2.50" shape="2078.31,1501.80,105.00 2077.52,1498.14,105.00 2074.64,1494.76,105.00 2069.68,1491.67,105.00 2066.36,1490.35,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_20" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_20_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="25.54" width="2.50" shape="2078.31,1501.80,105.00 2079.30,1476.28,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_21" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_21_0" index="0" allow="bicycle" speed="11.02" length="3.01" width="1.00" shape="2081.55,1502.02,105.00 2082.27,1499.10,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_22" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_22_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="10.88" length="0.34" width="2.50" shape="2080.80,1501.97,105.00 2080.89,1501.65,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_35" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_35_0" index="0" allow="bicycle" speed="10.10" length="4.00" width="1.00" shape="2065.83,1491.99,105.00 2062.10,1490.54,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_36" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_36_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="10.77" length="4.00" width="2.50" shape="2066.36,1490.35,105.00 2062.65,1488.88,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_37" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_37_0" index="0" allow="bicycle" speed="11.02" length="26.16" width="1.00" shape="2082.27,1499.10,105.00 2083.27,1495.02,105.00 2087.37,1490.35,105.00 2093.85,1488.02,105.00 2102.71,1488.02,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_38" function="internal">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_38_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="10.88" length="28.11" width="2.50" shape="2080.89,1501.65,105.00 2082.51,1495.72,105.00 2086.70,1491.60,105.00 2093.37,1489.62,105.00 2102.51,1489.76,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c0" function="crossing" crossingEdges="Richard-Wagner-Strasse.E.1 Richard-Wagner-Strasse.W.6">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c0_0" index="0" allow="pedestrian" speed="1.00" length="9.60" width="4.00" shape="2100.78,1487.29,105.04 2099.67,1496.83,105.03"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c1" function="crossing" crossingEdges="EntruperWeg.S.9 EntruperWeg.N.3">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c1_0" index="0" allow="pedestrian" speed="1.00" length="8.75" width="4.00" shape="2078.06,1478.29,104.95 2086.82,1478.25,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c2" function="crossing" crossingEdges="Gosebrede.S.1 Gosebrede.N.8">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c2_0" index="0" allow="pedestrian" speed="1.00" length="9.85" width="4.00" shape="2063.84,1491.63,104.82 2066.91,1482.28,104.82"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c3" function="crossing" crossingEdges="EntruperWeg.N.4 EntruperWeg.S.8">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c3_0" index="0" allow="pedestrian" speed="1.00" length="9.45" width="4.00" shape="2085.62,1500.30,105.00 2076.19,1499.66,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0" function="walkingarea">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0_0" index="0" allow="pedestrian" speed="1.00" length="10.83" width="4.00" shape="2085.49,1502.29,105.00 2087.48,1502.43,105.00 2101.41,1499.06,104.99 2101.66,1497.08,104.99 2096.85,1496.68,104.99 2092.89,1496.79,104.99 2089.77,1497.41,105.00 2087.50,1498.53,105.00 2086.07,1500.16,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w1" function="walkingarea">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w1_0" index="0" allow="pedestrian" speed="1.00" length="12.41" width="4.00" shape="2102.77,1487.53,105.00 2103.00,1485.54,105.00 2088.83,1476.24,105.00 2086.83,1476.23,105.00 2087.25,1479.17,105.00 2088.57,1481.68,105.00 2090.78,1483.77,105.00 2093.88,1485.44,105.00 2097.88,1486.69,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w2" function="walkingarea">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w2_0" index="0" allow="pedestrian" speed="1.00" length="8.93" width="4.00" shape="2078.05,1476.29,105.00 2076.05,1476.30,105.00 2065.64,1479.77,105.00 2065.02,1481.67,105.00 2065.01,1481.65,104.82 2069.01,1482.69,105.00 2072.28,1482.95,105.00 2074.82,1482.44,105.00 2076.63,1481.16,105.00 2077.70,1479.11,105.00"/>
+    </edge>
+    <edge id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w3" function="walkingarea">
+        <lane id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w3_0" index="0" allow="pedestrian" speed="1.00" length="11.20" width="4.00" shape="2061.94,1491.01,104.82 2061.95,1491.01,105.00 2061.32,1492.91,105.00 2074.07,1501.52,105.00 2076.07,1501.65,105.00 2075.78,1499.73,105.00 2074.66,1497.86,105.00 2072.72,1496.06,105.00 2069.96,1494.31,105.00 2066.37,1492.63,105.00"/>
+    </edge>
+    <edge id=":Junction_Richard-Wagner-Strasse_Mozartstrasse_c0" function="crossing" crossingEdges="Richard-Wagner-Strasse.W.2 Richard-Wagner-Strasse.E.1">
+        <lane id=":Junction_Richard-Wagner-Strasse_Mozartstrasse_c0_0" index="0" allow="pedestrian" speed="1.00" length="7.07" width="4.00" shape="2424.65,1550.92,100.92 2425.91,1543.96,100.94"/>
+    </edge>
+    <edge id=":Junction_Richard-Wagner-Strasse_Mozartstrasse_w0" function="walkingarea">
+        <lane id=":Junction_Richard-Wagner-Strasse_Mozartstrasse_w0_0" index="0" allow="pedestrian" speed="1.00" length="2.24" width="4.00" shape="2426.62,1551.28,100.92 2422.68,1550.56,100.94 2422.32,1552.53,100.94"/>
+    </edge>
+    <edge id=":Junction_Richard-Wagner-Strasse_Mozartstrasse_w1" function="walkingarea">
+        <lane id=":Junction_Richard-Wagner-Strasse_Mozartstrasse_w1_0" index="0" allow="pedestrian" speed="1.00" length="2.24" width="4.00" shape="2424.30,1541.64,100.96 2423.95,1543.60,100.96 2427.88,1544.32,100.94"/>
+    </edge>
+    <edge id=":PedestrianCrossing_Gosebrede_c0" function="crossing" crossingEdges="Gosebrede.N.7 Gosebrede.S.1">
+        <lane id=":PedestrianCrossing_Gosebrede_c0_0" index="0" allow="pedestrian" speed="1.00" length="6.98" width="4.00" shape="1895.60,1418.41,112.04 1892.84,1424.82,112.04"/>
+    </edge>
+    <edge id=":PedestrianCrossing_Gosebrede_w0" function="walkingarea">
+        <lane id=":PedestrianCrossing_Gosebrede_w0_0" index="0" allow="pedestrian" speed="1.00" length="2.24" width="4.00" shape="1893.76,1417.62,112.04 1897.44,1419.20,112.00 1898.23,1417.36,112.00"/>
+    </edge>
+    <edge id=":PedestrianCrossing_Gosebrede_w1" function="walkingarea">
+        <lane id=":PedestrianCrossing_Gosebrede_w1_0" index="0" allow="pedestrian" speed="1.00" length="2.24" width="4.00" shape="1893.88,1427.45,112.00 1894.67,1425.62,112.00 1891.00,1424.03,112.04"/>
+    </edge>
+
+    <edge id="EntruperWeg.N.1" from="Start_EntruperWeg_N" to="Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" priority="10" type="1" spreadType="center" shape="2069.57,1379.93,106.00 2077.84,1410.82,106.00 2083.92,1429.83,106.00">
+        <lane id="EntruperWeg.N.1_0" index="0" allow="pedestrian" speed="8.33" length="45.59" width="2.00" shape="2070.78,1379.61,106.00 2079.04,1410.47,106.00 2083.18,1423.41,106.00"/>
+        <lane id="EntruperWeg.N.1_1" index="1" disallow="pedestrian" speed="8.33" length="45.59" width="2.50" shape="2068.60,1380.19,106.00 2076.88,1411.10,106.00 2081.03,1424.09,106.00"/>
+    </edge>
+    <edge id="EntruperWeg.N.2" from="Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" to="Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N" priority="5" type="1" spreadType="center" shape="2085.01,1438.47,106.00 2084.85,1469.40,105.00">
+        <lane id="EntruperWeg.N.2_0" index="0" allow="pedestrian" speed="8.33" length="30.95" width="2.00" shape="2088.01,1438.49,106.00 2087.85,1469.42,105.00"/>
+        <lane id="EntruperWeg.N.2_1" index="1" allow="bicycle" speed="8.33" length="30.95" width="1.00" shape="2086.51,1438.48,106.00 2086.35,1469.41,105.00"/>
+        <lane id="EntruperWeg.N.2_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="30.95" width="2.50" shape="2084.76,1438.47,106.00 2084.60,1469.40,105.00"/>
+        <lane id="EntruperWeg.N.2_3" index="3" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="30.95" width="2.50" shape="2082.26,1438.46,106.00 2082.10,1469.39,105.00"/>
+    </edge>
+    <edge id="EntruperWeg.N.3" from="Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N" to="Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" priority="5" type="1" spreadType="center" shape="2084.87,1470.50,105.00 2084.83,1476.15,105.00">
+        <stopOffset vClasses="passenger bus truck trailer" value="8.00"/>
+        <lane id="EntruperWeg.N.3_0" index="0" allow="pedestrian" speed="8.33" length="5.75" width="2.00" shape="2087.87,1470.52,105.00 2087.83,1476.23,105.00"/>
+        <lane id="EntruperWeg.N.3_1" index="1" allow="bicycle" speed="8.33" length="5.75" width="1.00" shape="2086.37,1470.51,105.00 2086.33,1476.24,105.00"/>
+        <lane id="EntruperWeg.N.3_2" index="2" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="5.75" width="2.50" shape="2084.62,1470.50,105.00 2084.58,1476.25,105.00"/>
+        <lane id="EntruperWeg.N.3_3" index="3" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="5.75" width="2.50" shape="2082.12,1470.48,105.00 2082.08,1476.27,105.00"/>
+    </edge>
+    <edge id="EntruperWeg.N.4" from="Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" to="Start_BusStop_EntruperWeg.Nd" priority="10" type="1" spreadType="center" shape="2084.74,1502.24,105.00 2079.35,1581.64,105.00 2079.28,1581.84,109.69">
+        <lane id="EntruperWeg.N.4_0" index="0" allow="pedestrian" speed="8.33" length="85.32" width="2.00" shape="2086.49,1502.36,105.00 2081.10,1581.76,105.00 2080.09,1585.79,109.79"/>
+        <lane id="EntruperWeg.N.4_1" index="1" allow="bicycle" speed="8.33" length="85.32" width="1.00" shape="2084.99,1502.26,105.00 2079.60,1581.66,105.00 2078.43,1585.37,109.79"/>
+        <lane id="EntruperWeg.N.4_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="85.32" width="2.50" shape="2082.26,1502.07,105.00 2077.85,1581.54,105.00 2077.86,1581.34,109.69"/>
+    </edge>
+    <edge id="EntruperWeg.S.7" from="Fork_EntruperWeg.S_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" to="Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S" priority="5" type="1" spreadType="center" shape="2072.90,1574.03,106.00 2077.57,1508.54,105.00">
+        <lane id="EntruperWeg.S.7_0" index="0" allow="pedestrian" speed="8.33" length="70.86" width="2.00" shape="2069.54,1579.00,106.08 2074.58,1508.33,105.00"/>
+        <lane id="EntruperWeg.S.7_1" index="1" allow="bicycle" speed="8.33" length="70.86" width="1.00" shape="2071.03,1579.11,106.08 2076.07,1508.43,105.00"/>
+        <lane id="EntruperWeg.S.7_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="70.86" width="2.50" shape="2072.78,1579.23,106.08 2077.82,1508.56,105.00"/>
+        <lane id="EntruperWeg.S.7_3" index="3" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="70.86" width="2.50" shape="2075.27,1579.41,106.08 2080.31,1508.74,105.00"/>
+    </edge>
+    <edge id="EntruperWeg.S.8" from="Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S" to="Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" priority="5" type="1" spreadType="center" shape="2077.68,1507.68,105.00 2078.05,1501.95,105.00">
+        <stopOffset vClasses="passenger bus truck trailer" value="8.00"/>
+        <lane id="EntruperWeg.S.8_0" index="0" allow="pedestrian" speed="8.33" length="5.91" width="2.00" shape="2074.69,1507.49,105.00 2075.07,1501.58,105.00"/>
+        <lane id="EntruperWeg.S.8_1" index="1" allow="bicycle" speed="8.33" length="5.91" width="1.00" shape="2076.18,1507.58,105.00 2076.56,1501.68,105.00"/>
+        <lane id="EntruperWeg.S.8_2" index="2" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="5.91" width="2.50" shape="2077.93,1507.70,105.00 2078.31,1501.80,105.00"/>
+        <lane id="EntruperWeg.S.8_3" index="3" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="5.91" width="2.50" shape="2080.42,1507.86,105.00 2080.80,1501.97,105.00"/>
+    </edge>
+    <edge id="EntruperWeg.S.9" from="Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" to="End_EntruperWeg_S" priority="10" type="1" spreadType="center" shape="2078.30,1476.29,105.00 2078.08,1438.28,106.00 2078.38,1430.75,106.00 2073.23,1411.61,106.00 2064.89,1380.70,106.00">
+        <lane id="EntruperWeg.S.9_0" index="0" allow="pedestrian" speed="8.33" length="97.36" width="2.00" shape="2077.05,1476.30,105.00 2076.83,1438.26,106.00 2077.12,1430.89,106.00 2072.02,1411.94,106.00 2063.68,1381.03,106.00"/>
+        <lane id="EntruperWeg.S.9_1" index="1" disallow="pedestrian" speed="8.33" length="97.36" width="2.50" shape="2079.30,1476.28,105.00 2079.08,1438.30,106.00 2079.39,1430.64,106.00 2074.20,1411.35,106.00 2065.86,1380.44,106.00"/>
+    </edge>
+    <edge id="Gosebrede.N.7" from="PedestrianCrossing_Gosebrede" to="Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" priority="10" type="1" spreadType="center" shape="1896.97,1419.82,112.00 1984.39,1457.31,110.00 2011.35,1467.26,109.00">
+        <lane id="Gosebrede.N.7_0" index="0" allow="pedestrian" speed="13.89" length="123.70" width="2.00" shape="1897.83,1418.28,112.00 1985.04,1455.68,110.00 2011.96,1465.62,109.00"/>
+        <lane id="Gosebrede.N.7_1" index="1" allow="bicycle" speed="13.89" length="123.70" width="1.00" shape="1897.24,1419.66,112.00 1984.48,1457.08,110.00 2011.44,1467.03,109.00"/>
+        <lane id="Gosebrede.N.7_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="123.70" width="2.50" shape="1896.55,1421.27,112.00 1983.83,1458.70,110.00 2010.83,1468.67,109.00"/>
+    </edge>
+    <edge id="Gosebrede.N.8" from="Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" to="Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" priority="10" type="1" spreadType="center" shape="2021.07,1469.58,109.00 2064.37,1483.56,105.00">
+        <lane id="Gosebrede.N.8_0" index="0" allow="pedestrian" speed="13.89" length="45.70" width="2.00" shape="2021.99,1466.73,109.00 2065.33,1480.72,105.00"/>
+        <lane id="Gosebrede.N.8_1" index="1" allow="bicycle" speed="13.89" length="45.70" width="1.00" shape="2021.53,1468.15,109.00 2064.86,1482.14,105.00"/>
+        <lane id="Gosebrede.N.8_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="45.70" width="2.50" shape="2020.99,1469.82,109.00 2064.32,1483.80,105.00"/>
+        <lane id="Gosebrede.N.8_3" index="3" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="45.70" width="2.50" shape="2020.23,1472.20,109.00 2063.53,1486.18,105.00"/>
+    </edge>
+    <edge id="Gosebrede.S.1" from="Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" to="PedestrianCrossing_Gosebrede" priority="10" type="1" spreadType="center" shape="2062.18,1490.30,105.00 2019.56,1476.29,109.00 1983.05,1463.02,110.00 1894.78,1424.84,112.00">
+        <lane id="Gosebrede.S.1_0" index="0" allow="pedestrian" speed="13.89" length="179.90" width="2.00" shape="2061.63,1491.96,105.00 2018.99,1477.94,109.00 1982.40,1464.65,110.00 1894.28,1426.53,112.00"/>
+        <lane id="Gosebrede.S.1_1" index="1" allow="bicycle" speed="13.89" length="179.90" width="1.00" shape="2062.10,1490.54,105.00 2019.48,1476.53,109.00 1982.96,1463.25,110.00 1894.87,1425.16,112.00"/>
+        <lane id="Gosebrede.S.1_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="179.90" width="2.50" shape="2062.65,1488.88,105.00 2020.05,1474.87,109.00 1983.60,1461.63,110.00 1895.57,1423.55,112.00"/>
+    </edge>
+    <edge id="Richard-Wagner-Strasse.E.1" from="Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" to="Junction_Richard-Wagner-Strasse_Mozartstrasse" priority="10" type="1" spreadType="center" shape="2102.68,1488.27,105.00 2153.69,1494.22,104.00 2162.72,1496.84,103.45 2419.29,1543.52,101.00">
+        <lane id="Richard-Wagner-Strasse.E.1_0" index="0" allow="pedestrian" speed="13.89" length="326.18" width="2.00" shape="2102.88,1486.53,105.00 2154.04,1492.50,104.00 2163.12,1495.13,103.45 2424.13,1542.62,100.96"/>
+        <lane id="Richard-Wagner-Strasse.E.1_1" index="1" allow="bicycle" speed="13.89" length="326.18" width="1.00" shape="2102.71,1488.02,105.00 2153.74,1493.97,104.00 2162.78,1496.60,103.45 2423.86,1544.10,100.96"/>
+        <lane id="Richard-Wagner-Strasse.E.1_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="326.18" width="2.50" shape="2102.51,1489.76,105.00 2153.39,1495.70,104.00 2162.38,1498.30,103.45 2423.54,1545.82,100.96"/>
+    </edge>
+    <edge id="Richard-Wagner-Strasse.W.2" from="Junction_Richard-Wagner-Strasse_Mozartstrasse" to="Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" priority="10" type="1" spreadType="center" shape="2418.10,1548.97,101.00 2162.04,1502.45,104.00">
+        <lane id="Richard-Wagner-Strasse.W.2_0" index="0" allow="pedestrian" speed="13.89" length="265.06" width="2.00" shape="2422.50,1551.55,100.94 2161.73,1504.17,104.00"/>
+        <lane id="Richard-Wagner-Strasse.W.2_1" index="1" allow="bicycle" speed="13.89" length="265.06" width="1.00" shape="2422.77,1550.07,100.94 2162.00,1502.70,104.00"/>
+        <lane id="Richard-Wagner-Strasse.W.2_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="265.06" width="2.50" shape="2423.08,1548.35,100.94 2162.31,1500.97,104.00"/>
+    </edge>
+    <edge id="Richard-Wagner-Strasse.W.6" from="Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" to="Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" priority="10" type="1" spreadType="center" shape="2152.24,1501.31,104.00 2101.33,1495.02,105.00">
+        <lane id="Richard-Wagner-Strasse.W.6_0" index="0" allow="pedestrian" speed="13.89" length="50.75" width="2.00" shape="2151.87,1504.29,104.00 2101.54,1498.07,104.99"/>
+        <lane id="Richard-Wagner-Strasse.W.6_1" index="1" allow="bicycle" speed="13.89" length="50.75" width="1.00" shape="2152.06,1502.80,104.00 2101.71,1496.58,104.99"/>
+        <lane id="Richard-Wagner-Strasse.W.6_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="50.75" width="2.50" shape="2152.27,1501.06,104.00 2101.91,1494.84,104.99"/>
+        <lane id="Richard-Wagner-Strasse.W.6_3" index="3" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="50.75" width="2.50" shape="2152.58,1498.58,104.00 2102.20,1492.36,104.99"/>
+    </edge>
+
+    <tlLogic id="OWL322" type="static" programID="0" offset="0">
+        <phase duration="40" state="GGgGGgrrrrrrGGgGGgrrrrrrGrG"/>
+        <phase duration="3"  state="yygyygrrrrrryygyygrrrrrrrrr"/>
+        <phase duration="4"  state="rrGrrGrrrrrrrrGrrGrrrrrrrrr"/>
+        <phase duration="3"  state="rryrryrrrrrrrryrryrrrrrrrrr"/>
+        <phase duration="7"  state="rrrrrrGGGGggrrrrrrGGGggGrGr"/>
+        <phase duration="3"  state="rrrrrryyyyggrrrrrryyyggrrrr"/>
+        <phase duration="4"  state="rrrrrrrrrrGGrrrrrrrrrGGrrrr"/>
+        <phase duration="2"  state="rrrrrrrrrryyrrrrrrrrryyrrrr"/>
+        <phase duration="2"  state="yyyyyyrrrrrryyyyyyrrrrrrrrr"/>
+        <phase duration="2"  state="rrrrrryyyyyyrrrrrryyyyyrrrr"/>
+    </tlLogic>
+
+    <junction id="Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N" type="priority" x="2095.82" y="1469.67" z="105.00" incLanes="EntruperWeg.N.2_0 EntruperWeg.N.2_1 EntruperWeg.N.2_2 EntruperWeg.N.2_3" intLanes=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_0_0 :Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_0_1 :Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_0_2 :Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_0_3" shape="2088.85,1469.42,105.00 2080.85,1469.38,105.00 2080.87,1470.47,105.00 2088.87,1470.53,105.00">
+        <request index="0" response="0000" foes="0000" cont="0"/>
+        <request index="1" response="0000" foes="0000" cont="0"/>
+        <request index="2" response="0000" foes="0000" cont="0"/>
+        <request index="3" response="0000" foes="0000" cont="0"/>
+    </junction>
+    <junction id="Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S" type="priority" x="2069.14" y="1508.96" z="105.00" incLanes="EntruperWeg.S.7_0 EntruperWeg.S.7_1 EntruperWeg.S.7_2 EntruperWeg.S.7_3" intLanes=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_0_0 :Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_0_1 :Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_0_2 :Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_0_3" shape="2081.67,1507.94,105.00 2073.69,1507.42,105.00 2073.58,1508.26,105.00 2081.56,1508.82,105.00">
+        <request index="0" response="0000" foes="0000" cont="0"/>
+        <request index="1" response="0000" foes="0000" cont="0"/>
+        <request index="2" response="0000" foes="0000" cont="0"/>
+        <request index="3" response="0000" foes="0000" cont="0"/>
+    </junction>
+    <junction id="End_EntruperWeg_S" type="dead_end" x="2064.89" y="1380.70" z="106.00" incLanes="EntruperWeg.S.9_0 EntruperWeg.S.9_1" intLanes="" shape="2062.72,1381.29,106.00 2067.06,1380.11,106.00" rightOfWay="edgePriority"/>
+    <junction id="Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" type="priority" x="2084.26" y="1434.93" z="106.00" incLanes="EntruperWeg.N.1_0 EntruperWeg.N.1_1" intLanes=":Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_0 :Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_1 :Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_2" shape="2084.13,1423.10,106.00 2079.84,1424.47,106.00 2080.67,1427.34,106.00 2081.10,1429.51,106.00 2081.24,1431.34,106.00 2081.20,1433.19,106.00 2081.08,1435.44,106.00 2081.01,1438.45,106.00 2089.01,1438.49,106.00 2088.83,1435.08,106.00 2088.31,1432.62,106.00 2087.51,1430.65,106.00 2086.50,1428.71,106.00 2085.35,1426.35,106.00" rightOfWay="edgePriority">
+        <request index="0" response="000" foes="000" cont="0"/>
+        <request index="1" response="000" foes="000" cont="0"/>
+        <request index="2" response="000" foes="000" cont="0"/>
+    </junction>
+    <junction id="Fork_EntruperWeg.S_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" type="dead_end" x="2073.60" y="1579.29" z="106.00" incLanes="" intLanes="" shape="2076.52,1579.50,106.00 2068.54,1578.93,106.00" rightOfWay="edgePriority"/>
+    <junction id="Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" type="priority" x="2015.74" y="1466.78" z="109.00" incLanes="Gosebrede.N.7_0 Gosebrede.N.7_1 Gosebrede.N.7_2" intLanes=":Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_0 :Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_1 :Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_2 :Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_3" shape="2019.84,1473.39,109.00 2022.30,1465.77,109.00 2020.22,1465.28,109.00 2018.63,1465.19,109.00 2017.28,1465.30,109.00 2015.93,1465.39,109.00 2014.35,1465.26,109.00 2012.30,1464.68,109.00 2010.40,1469.84,109.00" rightOfWay="edgePriority">
+        <request index="0" response="0000" foes="0000" cont="0"/>
+        <request index="1" response="1000" foes="1000" cont="0"/>
+        <request index="2" response="0000" foes="0000" cont="0"/>
+        <request index="3" response="0000" foes="0010" cont="0"/>
+    </junction>
+    <junction id="Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" type="priority" x="2157.54" y="1502.57" z="104.00" incLanes="Richard-Wagner-Strasse.W.2_0 Richard-Wagner-Strasse.W.2_1 Richard-Wagner-Strasse.W.2_2" intLanes=":Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_0 :Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_1 :Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_2 :Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_3" shape="2161.55,1505.16,104.00 2162.53,1499.74,104.00 2152.73,1497.34,104.00 2151.75,1505.28,104.00 2153.83,1505.42,104.00 2155.38,1505.32,104.00 2156.66,1505.11,104.00 2157.95,1504.93,104.00 2159.49,1504.90,104.00" rightOfWay="edgePriority">
+        <request index="0" response="0000" foes="0000" cont="0"/>
+        <request index="1" response="1000" foes="1000" cont="0"/>
+        <request index="2" response="0000" foes="0000" cont="0"/>
+        <request index="3" response="0000" foes="0010" cont="0"/>
+    </junction>
+    <junction id="Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg" type="traffic_light" x="2081.25" y="1491.73" z="105.00" incLanes="Richard-Wagner-Strasse.W.6_0 Richard-Wagner-Strasse.W.6_1 Richard-Wagner-Strasse.W.6_2 Richard-Wagner-Strasse.W.6_3 EntruperWeg.N.3_0 EntruperWeg.N.3_1 EntruperWeg.N.3_2 EntruperWeg.N.3_3 Gosebrede.N.8_0 Gosebrede.N.8_1 Gosebrede.N.8_2 Gosebrede.N.8_3 EntruperWeg.S.8_0 EntruperWeg.S.8_1 EntruperWeg.S.8_2 EntruperWeg.S.8_3 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w1_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w2_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w3_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0_0" intLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_23_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_1_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_24_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_25_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_4_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_26_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_27_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_7_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_28_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_9_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_29_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_30_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_31_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_13_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_32_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_33_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_16_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_34_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_35_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_36_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_20_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_37_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_38_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c0_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c1_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c2_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c3_0" shape="2101.42,1499.06,105.00 2103.00,1485.54,105.00 2098.65,1484.82,105.00 2095.10,1483.77,105.00 2092.34,1482.38,105.00 2090.38,1480.66,105.00 2089.21,1478.61,105.00 2088.83,1476.23,105.00 2076.05,1476.30,105.00 2075.77,1478.30,105.00 2074.91,1479.73,105.00 2073.47,1480.59,105.00 2071.44,1480.88,105.00 2068.83,1480.61,105.00 2065.64,1479.77,105.00 2061.32,1492.91,105.00 2065.29,1494.34,105.00 2068.53,1495.77,105.00 2071.02,1497.20,105.00 2072.78,1498.64,105.00 2073.79,1500.08,105.00 2074.07,1501.52,105.00 2087.48,1502.43,105.00 2089.18,1499.81,105.00 2091.14,1499.06,105.00 2093.83,1498.69,105.00 2097.26,1498.69,105.00" rightOfWay="edgePriority">
+        <request index="0"  response="100100000000000000000000000" foes="100100000000100000010000000" cont="1"/>
+        <request index="1"  response="010111011000000010000000000" foes="010111111100100011010001000" cont="0"/>
+        <request index="2"  response="001100000011011000000110000" foes="001111100111111111010111000" cont="1"/>
+        <request index="3"  response="100100000000000000000000110" foes="100100000100100001010000110" cont="1"/>
+        <request index="4"  response="010111010000000110000000000" foes="010111110100100111010000100" cont="0"/>
+        <request index="5"  response="001100000011011000000000000" foes="001111100011111111010000100" cont="1"/>
+        <request index="6"  response="001100000000010000000000000" foes="001101000000010000000000000" cont="1"/>
+        <request index="7"  response="101000000010110000000111111" foes="101011000010110000100111111" cont="0"/>
+        <request index="8"  response="001100000010010000010000000" foes="001111000010010000010000000" cont="1"/>
+        <request index="9"  response="101000000110110000000111110" foes="101011000110110000000111110" cont="0"/>
+        <request index="10" response="011000111110110000000110110" foes="011000111110110000000110110" cont="1"/>
+        <request index="11" response="011000110110110000000110100" foes="011000110110110000000110100" cont="1"/>
+        <request index="12" response="011000000000000000000000000" foes="011000100001000000000100100" cont="1"/>
+        <request index="13" response="010101000000000110101000000" foes="010101100001000111111100100" cont="0"/>
+        <request index="14" response="110000000010000000000111111" foes="110011100011000111010111111" cont="1"/>
+        <request index="15" response="011000000000111000000000000" foes="011000100000111000000100100" cont="1"/>
+        <request index="16" response="010111000000000110100000000" foes="010111100000100111110100100" cont="0"/>
+        <request index="17" response="110000000000000000000011110" foes="110011100000000111000011110" cont="1"/>
+        <request index="18" response="110000000000000000000000010" foes="110000000000000010000000010" cont="1"/>
+        <request index="19" response="110000000000000000000010010" foes="110000000000000110000010010" cont="1"/>
+        <request index="20" response="101000000111111000000110110" foes="101000000111111110000110110" cont="0"/>
+        <request index="21" response="100100000110110001111110110" foes="100100000110110001111110110" cont="1"/>
+        <request index="22" response="100100000110100001110110110" foes="100100000110100001110110110" cont="1"/>
+        <request index="23" response="000000000000000000000000000" foes="000011000010010000101111111" cont="0"/>
+        <request index="24" response="000000000000000000000000000" foes="000000100001001111111100100" cont="0"/>
+        <request index="25" response="000000000000000000000000000" foes="000000011111111110000010010" cont="0"/>
+        <request index="26" response="000000000000000000000000000" foes="000011111100100001010001001" cont="0"/>
+    </junction>
+    <junction id="Junction_Richard-Wagner-Strasse_Mozartstrasse" type="dead_end" x="2422.85" y="1549.63" z="101.00" incLanes="Richard-Wagner-Strasse.E.1_0 Richard-Wagner-Strasse.E.1_1 Richard-Wagner-Strasse.E.1_2 :Junction_Richard-Wagner-Strasse_Mozartstrasse_w0_0" intLanes="" shape="2423.31,1547.12,101.00 2422.32,1552.53,101.00 2423.32,1547.05,101.00"/>
+    <junction id="PedestrianCrossing_Gosebrede" type="dead_end" x="1896.06" y="1422.41" z="112.00" incLanes="Gosebrede.S.1_0 Gosebrede.S.1_1 Gosebrede.S.1_2 :PedestrianCrossing_Gosebrede_w0_0" intLanes="" shape="1896.06,1422.42,112.00 1898.23,1417.36,112.00 1893.88,1427.45,112.00"/>
+    <junction id="Start_BusStop_EntruperWeg.Nd" type="dead_end" x="2080.11" y="1585.79" z="109.79" incLanes="EntruperWeg.N.4_0 EntruperWeg.N.4_1 EntruperWeg.N.4_2" intLanes="" shape="2081.06,1586.03,109.79 2075.89,1584.74,109.79"/>
+    <junction id="Start_EntruperWeg_N" type="dead_end" x="2069.57" y="1379.93" z="106.00" incLanes="" intLanes="" shape="2067.40,1380.51,106.00 2071.74,1379.35,106.00" rightOfWay="edgePriority"/>
+
+    <junction id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_23_0" type="internal" x="2087.22" y="1498.40" z="105.00" incLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_0" intLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_7_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_9_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_14_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_17_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c0_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c3_0"/>
+    <junction id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_24_0" type="internal" x="2076.21" y="1496.27" z="104.99" incLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_2_0 Gosebrede.N.8_1 Gosebrede.N.8_2" intLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_4_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_7_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_9_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_10_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_11_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_12_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_13_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_14_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_15_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_16_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_17_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_20_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_21_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_22_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c0_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c1_0"/>
+    <junction id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_25_0" type="internal" x="2083.64" y="1498.16" z="105.00" incLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_3_0" intLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_1_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_2_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_7_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_9_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_14_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_17_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c0_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c3_0"/>
+    <junction id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_26_0" type="internal" x="2095.11" y="1490.89" z="104.99" incLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_5_0 Gosebrede.N.8_1 Gosebrede.N.8_2" intLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_7_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_9_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_10_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_11_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_12_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_13_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_14_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_15_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_16_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_20_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_21_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_22_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c0_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c1_0"/>
+    <junction id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_27_0" type="internal" x="2098.78" y="1487.23" z="105.00" incLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_6_0" intLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_13_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_16_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_21_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_22_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c0_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c1_0"/>
+    <junction id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_28_0" type="internal" x="2098.57" y="1488.94" z="105.00" incLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_8_0" intLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_7_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_13_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_16_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_21_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_22_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c0_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c1_0"/>
+    <junction id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_29_0" type="internal" x="2081.04" y="1478.16" z="105.00" incLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_10_0 EntruperWeg.S.8_1 EntruperWeg.S.8_2 Gosebrede.N.8_1 Gosebrede.N.8_3 Richard-Wagner-Strasse.W.6_1 Richard-Wagner-Strasse.W.6_3" intLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_1_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_2_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_4_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_5_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_13_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_14_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_16_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_17_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_18_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_19_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_20_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c1_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c2_0"/>
+    <junction id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_30_0" type="internal" x="2081.46" y="1479.88" z="105.00" incLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_11_0 EntruperWeg.S.8_1 EntruperWeg.S.8_2 Gosebrede.N.8_1 Gosebrede.N.8_3 Richard-Wagner-Strasse.W.6_1 Richard-Wagner-Strasse.W.6_3" intLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_1_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_2_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_4_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_5_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_13_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_14_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_16_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_17_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_18_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_19_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_20_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c1_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c2_0"/>
+    <junction id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_31_0" type="internal" x="2077.76" y="1480.29" z="105.00" incLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_12_0" intLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_2_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_5_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_20_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c1_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c2_0"/>
+    <junction id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_32_0" type="internal" x="2086.75" y="1483.65" z="105.00" incLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_14_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_2_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_5_0 Richard-Wagner-Strasse.W.6_1 Richard-Wagner-Strasse.W.6_2" intLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_24_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_26_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_1_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_2_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_3_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_4_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_5_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_7_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_9_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_10_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_11_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_16_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_20_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_21_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_22_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c2_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c3_0"/>
+    <junction id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_33_0" type="internal" x="2078.59" y="1480.29" z="105.00" incLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_15_0" intLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_2_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_5_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_13_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_14_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_20_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c1_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c2_0"/>
+    <junction id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_34_0" type="internal" x="2070.91" y="1489.10" z="105.00" incLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_17_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_2_0 Richard-Wagner-Strasse.W.6_1 Richard-Wagner-Strasse.W.6_2" intLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_24_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_1_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_2_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_3_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_4_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_7_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_9_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_10_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_11_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_20_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_21_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_22_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c2_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c3_0"/>
+    <junction id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_35_0" type="internal" x="2065.83" y="1491.99" z="105.00" incLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_18_0" intLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_1_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_4_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_10_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_11_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c2_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c3_0"/>
+    <junction id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_36_0" type="internal" x="2066.36" y="1490.35" z="105.00" incLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_19_0" intLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_1_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_4_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_10_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_11_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c2_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c3_0"/>
+    <junction id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_37_0" type="internal" x="2082.27" y="1499.10" z="105.00" incLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_21_0 EntruperWeg.N.3_1 EntruperWeg.N.3_2 Gosebrede.N.8_1 Gosebrede.N.8_3 Richard-Wagner-Strasse.W.6_1 Richard-Wagner-Strasse.W.6_3" intLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_1_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_2_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_4_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_5_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_6_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_7_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_8_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_9_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_13_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_14_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_16_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_17_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c0_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c3_0"/>
+    <junction id=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_38_0" type="internal" x="2080.89" y="1501.65" z="105.00" incLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_22_0 EntruperWeg.N.3_1 EntruperWeg.N.3_2 Gosebrede.N.8_1 Gosebrede.N.8_3 Richard-Wagner-Strasse.W.6_1 Richard-Wagner-Strasse.W.6_3" intLanes=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_1_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_2_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_4_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_5_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_6_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_7_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_8_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_9_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_13_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_14_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_16_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_17_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c0_0 :Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c3_0"/>
+
+    <connection from="EntruperWeg.N.1" to="EntruperWeg.N.2" fromLane="1" toLane="1" keepClear="0" via=":Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_0" dir="s" state="M"/>
+    <connection from="EntruperWeg.N.1" to="EntruperWeg.N.2" fromLane="1" toLane="2" keepClear="0" via=":Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_1" dir="s" state="M"/>
+    <connection from="EntruperWeg.N.1" to="EntruperWeg.N.2" fromLane="1" toLane="3" keepClear="0" via=":Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_2" dir="s" state="M"/>
+    <connection from="EntruperWeg.N.2" to="EntruperWeg.N.3" fromLane="0" toLane="0" keepClear="0" via=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_0_0" dir="s" state="M"/>
+    <connection from="EntruperWeg.N.2" to="EntruperWeg.N.3" fromLane="1" toLane="1" keepClear="0" via=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_0_1" dir="s" state="M"/>
+    <connection from="EntruperWeg.N.2" to="EntruperWeg.N.3" fromLane="2" toLane="2" keepClear="0" via=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_0_2" dir="s" state="M"/>
+    <connection from="EntruperWeg.N.2" to="EntruperWeg.N.3" fromLane="3" toLane="3" keepClear="0" via=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_0_3" dir="s" state="M"/>
+    <connection from="EntruperWeg.N.3" to="Richard-Wagner-Strasse.E.1" fromLane="1" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_6_0" tl="OWL322" linkIndex="6" dir="r" state="o"/>
+    <connection from="EntruperWeg.N.3" to="EntruperWeg.N.4" fromLane="1" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_7_0" tl="OWL322" linkIndex="7" dir="s" state="o"/>
+    <connection from="EntruperWeg.N.3" to="Richard-Wagner-Strasse.E.1" fromLane="2" toLane="2" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_8_0" tl="OWL322" linkIndex="8" dir="r" state="o"/>
+    <connection from="EntruperWeg.N.3" to="EntruperWeg.N.4" fromLane="2" toLane="2" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_9_0" tl="OWL322" linkIndex="9" dir="s" state="o"/>
+    <connection from="EntruperWeg.N.3" to="Gosebrede.S.1" fromLane="3" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_10_0" tl="OWL322" linkIndex="10" dir="l" state="o"/>
+    <connection from="EntruperWeg.N.3" to="Gosebrede.S.1" fromLane="3" toLane="2" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_11_0" tl="OWL322" linkIndex="11" dir="l" state="o"/>
+    <connection from="EntruperWeg.S.7" to="EntruperWeg.S.8" fromLane="0" toLane="0" keepClear="0" via=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_0_0" dir="s" state="M"/>
+    <connection from="EntruperWeg.S.7" to="EntruperWeg.S.8" fromLane="1" toLane="1" keepClear="0" via=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_0_1" dir="s" state="M"/>
+    <connection from="EntruperWeg.S.7" to="EntruperWeg.S.8" fromLane="2" toLane="2" keepClear="0" via=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_0_2" dir="s" state="M"/>
+    <connection from="EntruperWeg.S.7" to="EntruperWeg.S.8" fromLane="3" toLane="3" keepClear="0" via=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_0_3" dir="s" state="M"/>
+    <connection from="EntruperWeg.S.8" to="Gosebrede.S.1" fromLane="1" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_18_0" tl="OWL322" linkIndex="18" dir="r" state="o"/>
+    <connection from="EntruperWeg.S.8" to="Gosebrede.S.1" fromLane="2" toLane="2" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_19_0" tl="OWL322" linkIndex="19" dir="r" state="o"/>
+    <connection from="EntruperWeg.S.8" to="EntruperWeg.S.9" fromLane="2" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_20_0" tl="OWL322" linkIndex="20" dir="s" state="o"/>
+    <connection from="EntruperWeg.S.8" to="Richard-Wagner-Strasse.E.1" fromLane="3" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_21_0" tl="OWL322" linkIndex="21" dir="l" state="o"/>
+    <connection from="EntruperWeg.S.8" to="Richard-Wagner-Strasse.E.1" fromLane="3" toLane="2" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_22_0" tl="OWL322" linkIndex="22" dir="l" state="o"/>
+    <connection from="Gosebrede.N.7" to="Gosebrede.N.8" fromLane="1" toLane="1" keepClear="0" via=":Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_0" dir="s" state="M"/>
+    <connection from="Gosebrede.N.7" to="Gosebrede.N.8" fromLane="1" toLane="3" keepClear="0" via=":Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_1" dir="s" state="m"/>
+    <connection from="Gosebrede.N.7" to="Gosebrede.N.8" fromLane="2" toLane="2" keepClear="0" via=":Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_2" dir="s" state="M"/>
+    <connection from="Gosebrede.N.7" to="Gosebrede.N.8" fromLane="2" toLane="3" keepClear="0" via=":Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_3" dir="s" state="M"/>
+    <connection from="Gosebrede.N.8" to="EntruperWeg.S.9" fromLane="1" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_12_0" tl="OWL322" linkIndex="12" dir="r" state="o"/>
+    <connection from="Gosebrede.N.8" to="Richard-Wagner-Strasse.E.1" fromLane="1" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_13_0" tl="OWL322" linkIndex="13" dir="s" state="o"/>
+    <connection from="Gosebrede.N.8" to="EntruperWeg.N.4" fromLane="1" toLane="1" contPos="25.00" shape="2064.86,1482.14,105.00 2072.58,1483.84,105.00 2077.90,1482.33,105.00 2082.62,1480.98,105.00 2086.72,1481.10,105.00 2086.75,1483.86,105.00 2085.94,1491.28,105.00 2084.99,1502.26,105.00" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_14_0" tl="OWL322" linkIndex="14" dir="l" state="o"/>
+    <connection from="Gosebrede.N.8" to="EntruperWeg.S.9" fromLane="2" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_15_0" tl="OWL322" linkIndex="15" dir="r" state="o"/>
+    <connection from="Gosebrede.N.8" to="Richard-Wagner-Strasse.E.1" fromLane="2" toLane="2" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_16_0" tl="OWL322" linkIndex="16" dir="s" state="o"/>
+    <connection from="Gosebrede.N.8" to="EntruperWeg.N.4" fromLane="3" toLane="2" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_17_0" tl="OWL322" linkIndex="17" dir="l" state="o"/>
+    <connection from="Richard-Wagner-Strasse.W.2" to="Richard-Wagner-Strasse.W.6" fromLane="1" toLane="1" keepClear="0" via=":Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_0" dir="s" state="M"/>
+    <connection from="Richard-Wagner-Strasse.W.2" to="Richard-Wagner-Strasse.W.6" fromLane="1" toLane="3" keepClear="0" via=":Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_1" dir="s" state="m"/>
+    <connection from="Richard-Wagner-Strasse.W.2" to="Richard-Wagner-Strasse.W.6" fromLane="2" toLane="2" keepClear="0" via=":Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_2" dir="s" state="M"/>
+    <connection from="Richard-Wagner-Strasse.W.2" to="Richard-Wagner-Strasse.W.6" fromLane="2" toLane="3" keepClear="0" via=":Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_3" dir="s" state="M"/>
+    <connection from="Richard-Wagner-Strasse.W.6" to="EntruperWeg.N.4" fromLane="1" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0_0" tl="OWL322" linkIndex="0" dir="r" state="o"/>
+    <connection from="Richard-Wagner-Strasse.W.6" to="Gosebrede.S.1" fromLane="1" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_1_0" tl="OWL322" linkIndex="1" dir="s" state="o"/>
+    <connection from="Richard-Wagner-Strasse.W.6" to="EntruperWeg.S.9" fromLane="1" toLane="1" contPos="28.00" shape="2101.71,1496.58,104.99 2090.15,1496.31,104.99 2086.59,1497.22,104.99 2078.61,1498.36,104.99 2076.07,1498.43,104.99 2076.45,1492.46,105.00 2079.30,1476.28,105.00" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_2_0" tl="OWL322" linkIndex="2" dir="l" state="o"/>
+    <connection from="Richard-Wagner-Strasse.W.6" to="EntruperWeg.N.4" fromLane="2" toLane="2" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_3_0" tl="OWL322" linkIndex="3" dir="r" state="o"/>
+    <connection from="Richard-Wagner-Strasse.W.6" to="Gosebrede.S.1" fromLane="2" toLane="2" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_4_0" tl="OWL322" linkIndex="4" dir="s" state="o"/>
+    <connection from="Richard-Wagner-Strasse.W.6" to="EntruperWeg.S.9" fromLane="3" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_5_0" tl="OWL322" linkIndex="5" dir="l" state="o"/>
+
+    <connection from=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_0" to="EntruperWeg.N.3" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_0" to="EntruperWeg.N.3" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_0" to="EntruperWeg.N.3" fromLane="2" toLane="2" dir="s" state="M"/>
+    <connection from=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_0" to="EntruperWeg.N.3" fromLane="3" toLane="3" dir="s" state="M"/>
+    <connection from=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_0" to="EntruperWeg.S.8" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_0" to="EntruperWeg.S.8" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_0" to="EntruperWeg.S.8" fromLane="2" toLane="2" dir="s" state="M"/>
+    <connection from=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_0" to="EntruperWeg.S.8" fromLane="3" toLane="3" dir="s" state="M"/>
+    <connection from=":Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0" to="EntruperWeg.N.2" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0" to="EntruperWeg.N.2" fromLane="1" toLane="2" dir="s" state="M"/>
+    <connection from=":Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0" to="EntruperWeg.N.2" fromLane="2" toLane="3" dir="s" state="M"/>
+    <connection from=":Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0" to="Gosebrede.N.8" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0" to="Gosebrede.N.8" fromLane="1" toLane="3" dir="s" state="M"/>
+    <connection from=":Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0" to="Gosebrede.N.8" fromLane="2" toLane="2" dir="s" state="M"/>
+    <connection from=":Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0" to="Gosebrede.N.8" fromLane="3" toLane="3" dir="s" state="M"/>
+    <connection from=":Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0" to="Richard-Wagner-Strasse.W.6" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0" to="Richard-Wagner-Strasse.W.6" fromLane="1" toLane="3" dir="s" state="M"/>
+    <connection from=":Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0" to="Richard-Wagner-Strasse.W.6" fromLane="2" toLane="2" dir="s" state="M"/>
+    <connection from=":Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0" to="Richard-Wagner-Strasse.W.6" fromLane="3" toLane="3" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_0" to="EntruperWeg.N.4" fromLane="0" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_23_0" dir="r" state="m"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_23" to="EntruperWeg.N.4" fromLane="0" toLane="1" dir="r" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_1" to="Gosebrede.S.1" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_2" to="EntruperWeg.S.9" fromLane="0" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_24_0" dir="l" state="m"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_24" to="EntruperWeg.S.9" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_3" to="EntruperWeg.N.4" fromLane="0" toLane="2" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_25_0" dir="r" state="m"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_25" to="EntruperWeg.N.4" fromLane="0" toLane="2" dir="r" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_4" to="Gosebrede.S.1" fromLane="0" toLane="2" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_5" to="EntruperWeg.S.9" fromLane="0" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_26_0" dir="l" state="m"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_26" to="EntruperWeg.S.9" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_6" to="Richard-Wagner-Strasse.E.1" fromLane="0" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_27_0" dir="r" state="m"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_27" to="Richard-Wagner-Strasse.E.1" fromLane="0" toLane="1" dir="r" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_7" to="EntruperWeg.N.4" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_8" to="Richard-Wagner-Strasse.E.1" fromLane="0" toLane="2" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_28_0" dir="r" state="m"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_28" to="Richard-Wagner-Strasse.E.1" fromLane="0" toLane="2" dir="r" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_9" to="EntruperWeg.N.4" fromLane="0" toLane="2" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_10" to="Gosebrede.S.1" fromLane="0" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_29_0" dir="l" state="m"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_29" to="Gosebrede.S.1" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_11" to="Gosebrede.S.1" fromLane="0" toLane="2" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_30_0" dir="l" state="m"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_30" to="Gosebrede.S.1" fromLane="0" toLane="2" dir="l" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_12" to="EntruperWeg.S.9" fromLane="0" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_31_0" dir="r" state="m"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_31" to="EntruperWeg.S.9" fromLane="0" toLane="1" dir="r" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_13" to="Richard-Wagner-Strasse.E.1" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_14" to="EntruperWeg.N.4" fromLane="0" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_32_0" dir="l" state="m"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_32" to="EntruperWeg.N.4" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_15" to="EntruperWeg.S.9" fromLane="0" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_33_0" dir="r" state="m"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_33" to="EntruperWeg.S.9" fromLane="0" toLane="1" dir="r" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_16" to="Richard-Wagner-Strasse.E.1" fromLane="0" toLane="2" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_17" to="EntruperWeg.N.4" fromLane="0" toLane="2" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_34_0" dir="l" state="m"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_34" to="EntruperWeg.N.4" fromLane="0" toLane="2" dir="l" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_18" to="Gosebrede.S.1" fromLane="0" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_35_0" dir="r" state="m"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_35" to="Gosebrede.S.1" fromLane="0" toLane="1" dir="r" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_19" to="Gosebrede.S.1" fromLane="0" toLane="2" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_36_0" dir="r" state="m"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_36" to="Gosebrede.S.1" fromLane="0" toLane="2" dir="r" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_20" to="EntruperWeg.S.9" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_21" to="Richard-Wagner-Strasse.E.1" fromLane="0" toLane="1" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_37_0" dir="l" state="m"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_37" to="Richard-Wagner-Strasse.E.1" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_22" to="Richard-Wagner-Strasse.E.1" fromLane="0" toLane="2" via=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_38_0" dir="l" state="m"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_38" to="Richard-Wagner-Strasse.E.1" fromLane="0" toLane="2" dir="l" state="M"/>
+
+    <connection from=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_w0" to="EntruperWeg.N.3" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="EntruperWeg.N.2" to=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_N_w0" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_w0" to="EntruperWeg.S.8" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="EntruperWeg.S.7" to=":Bikebox_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_S_w0" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0" to="EntruperWeg.N.2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="EntruperWeg.N.1" to=":Fork_EntruperWeg.N_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0" to="Gosebrede.N.8" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="Gosebrede.N.7" to=":Fork_Gosebrede.E_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0" to="Richard-Wagner-Strasse.W.6" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="Richard-Wagner-Strasse.W.2" to=":Fork_Richard-Wagner-Strasse.W_Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c0" to=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0" fromLane="0" toLane="0" tl="OWL322" linkIndex="23" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c1" to=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w1" fromLane="0" toLane="0" tl="OWL322" linkIndex="24" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c2" to=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w2" fromLane="0" toLane="0" tl="OWL322" linkIndex="25" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c3" to=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w3" fromLane="0" toLane="0" tl="OWL322" linkIndex="26" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0" to=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c3" fromLane="0" toLane="0" tl="OWL322" linkIndex="26" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0" to="EntruperWeg.N.4" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="Richard-Wagner-Strasse.W.6" to=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w1" to=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c0" fromLane="0" toLane="0" tl="OWL322" linkIndex="23" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w1" to="Richard-Wagner-Strasse.E.1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="EntruperWeg.N.3" to=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w2" to=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c1" fromLane="0" toLane="0" tl="OWL322" linkIndex="24" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w2" to="EntruperWeg.S.9" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="Gosebrede.N.8" to=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w3" to=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c2" fromLane="0" toLane="0" tl="OWL322" linkIndex="25" dir="s" state="M"/>
+    <connection from=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w3" to="Gosebrede.S.1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="EntruperWeg.S.8" to=":Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w3" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":Junction_Richard-Wagner-Strasse_Mozartstrasse_c0" to=":Junction_Richard-Wagner-Strasse_Mozartstrasse_w1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":Junction_Richard-Wagner-Strasse_Mozartstrasse_w0" to=":Junction_Richard-Wagner-Strasse_Mozartstrasse_c0" fromLane="0" toLane="0" dir="s" state="m"/>
+    <connection from=":Junction_Richard-Wagner-Strasse_Mozartstrasse_w0" to="Richard-Wagner-Strasse.W.2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="Richard-Wagner-Strasse.E.1" to=":Junction_Richard-Wagner-Strasse_Mozartstrasse_w1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":PedestrianCrossing_Gosebrede_c0" to=":PedestrianCrossing_Gosebrede_w1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":PedestrianCrossing_Gosebrede_w0" to=":PedestrianCrossing_Gosebrede_c0" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":PedestrianCrossing_Gosebrede_w0" to="Gosebrede.N.7" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="Gosebrede.S.1" to=":PedestrianCrossing_Gosebrede_w1" fromLane="0" toLane="0" dir="s" state="M"/>
+</net>

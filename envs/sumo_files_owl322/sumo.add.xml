@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 12.02.2021 13:56:27 by Eclipse SUMO netedit Version UNKNOWN
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="C:\KI4LSA\Code\sumo_files_lemgo_owl322\shrinked\sumo_shrinked12.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="C:\KI4LSA\Code\sumo_files_lemgo_owl322\shrinked\sumo_shrinked12.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-internal-links value="false"/>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+    <netedit>
+        <additional-files value="C:\KI4LSA\Code\sumo_files_lemgo_owl322\shrinked\sumo3.add.xml"/>
+    </netedit>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <busStop id="BusStop_Gosebrede.N" lane="Gosebrede.N.7_2" startPos="30.00" endPos="45.00"/>
+    <busStop id="BusStop_Richard-Wagner-Strasse.W" lane="Richard-Wagner-Strasse.W.2_2" startPos="7.33" endPos="22.33"/>
+    <busStop id="BusStop_Rossmann.N" lane="EntruperWeg.N.1_1" startPos="9.77" endPos="19.77"/>
+    <busStop id="BusStop_Rossmann.S" lane="EntruperWeg.S.9_1" startPos="76.08" endPos="86.08"/>
+    <busStop id="BusStop_Slavertrift.N" lane="EntruperWeg.N.4_2" startPos="46.00" endPos="62.00"/>
+    <busStop id="BusStop_Slavertrift.S" lane="EntruperWeg.S.7_2" startPos="32.67" endPos="47.67"/>
+    <busStop id="busStop_Richard-Wagner-Strasse.E" lane="Richard-Wagner-Strasse.E.1_2" startPos="308.45" endPos="318.45"/>
+    <!--
+    <e2Detector id="EntruperWeg.N.2_1" lane="EntruperWeg.N.2_1" pos="0.00" length="30.94" freq="60.00" file="e2output.xml"/>
+    <e2Detector id="EntruperWeg.N.2_2" lane="EntruperWeg.N.2_2" pos="0.00" length="30.94" freq="60.00" file="e2output.xml" friendlyPos="1"/>
+    <e2Detector id="EntruperWeg.N.2_3" lane="EntruperWeg.N.2_3" pos="0.00" length="30.94" freq="60.00" file="e2output.xml" friendlyPos="1"/>
+    <e2Detector id="EntruperWeg.N.3_1" lane="EntruperWeg.N.3_1" pos="0.00" length="5.65" freq="60.00" file="e2output.xml" friendlyPos="1"/>
+    <e2Detector id="EntruperWeg.N.3_2" lane="EntruperWeg.N.3_2" pos="0.00" length="5.65" freq="60.00" file="e2output.xml" friendlyPos="1"/>
+    <e2Detector id="EntruperWeg.N.3_3" lane="EntruperWeg.N.3_3" pos="0.00" length="5.65" freq="60.00" file="e2output.xml" friendlyPos="1"/>
+    <e2Detector id="EntruperWeg.S.7_1" lane="EntruperWeg.S.7_1" pos="15.75" length="50.00" freq="60.00" file="e2output.xml"/>
+    <e2Detector id="EntruperWeg.S.7_2" lane="EntruperWeg.S.7_2" pos="15.75" length="50.00" freq="60.00" file="e2output.xml"/>
+    <e2Detector id="EntruperWeg.S.7_3" lane="EntruperWeg.S.7_3" pos="15.75" length="50.00" freq="60.00" file="e2output.xml"/>
+    <e2Detector id="EntruperWeg.S.8_1" lane="EntruperWeg.S.8_1" pos="0.00" length="5.81" freq="60.00" file="e2output.xml" friendlyPos="1"/>
+    <e2Detector id="EntruperWeg.S.8_2" lane="EntruperWeg.S.8_2" pos="0.00" length="5.81" freq="60.00" file="e2output.xml" friendlyPos="1"/>
+    <e2Detector id="EntruperWeg.S.8_3" lane="EntruperWeg.S.8_3" pos="0.00" length="5.81" freq="60.00" file="e2output.xml" friendlyPos="1"/>
+    <e2Detector id="Gosebrede.N.8_1" lane="Gosebrede.N.8_1" pos="0.00" length="45.60" freq="60.00" file="e2output.xml" friendlyPos="1"/>
+    <e2Detector id="Gosebrede.N.8_2" lane="Gosebrede.N.8_2" pos="0.00" length="45.60" freq="60.00" file="e2output.xml" friendlyPos="1"/>
+    <e2Detector id="Gosebrede.N.8_3" lane="Gosebrede.N.8_3" pos="0.00" length="45.60" freq="60.00" file="e2output.xml" friendlyPos="1"/>
+    <e2Detector id="Richard-Wagner-Strasse.W.6_1" lane="Richard-Wagner-Strasse.W.6_1" pos="0.65" length="50.00" freq="60.00" file="e2output.xml" friendlyPos="1"/>
+    <e2Detector id="Richard-Wagner-Strasse.W.6_2" lane="Richard-Wagner-Strasse.W.6_2" pos="0.65" length="50.00" freq="60.00" file="e2output.xml" friendlyPos="1"/>
+    <e2Detector id="Richard-Wagner-Strasse.W.6_3" lane="Richard-Wagner-Strasse.W.6_3" pos="0.65" length="50.00" freq="60.00" file="e2output.xml" friendlyPos="1"/>
+    -->
+
+    <laneAreaDetector file="e2output.xml" freq="60" friendlyPos="x" id="EntruperWeg.N.3_1" lane="EntruperWeg.N.3_1" length="5.65" pos="0" />
+    <laneAreaDetector file="e2output.xml" freq="60" friendlyPos="x" id="EntruperWeg.N.3_2" lane="EntruperWeg.N.3_2" length="5.65" pos="0" />
+    <laneAreaDetector file="e2output.xml" freq="60" friendlyPos="x" id="EntruperWeg.N.3_3" lane="EntruperWeg.N.3_3" length="5.65" pos="0" />
+    <laneAreaDetector id="EntruperWeg.N.2_1" lane="EntruperWeg.N.2_1" pos="0.00" length="30.94" freq="60.00" file="e2output.xml" />
+    <laneAreaDetector id="EntruperWeg.N.2_2" lane="EntruperWeg.N.2_2" pos="0.00" length="30.94" freq="60.00" file="e2output.xml" friendlyPos="1"/>
+    <laneAreaDetector id="EntruperWeg.N.2_3" lane="EntruperWeg.N.2_3" pos="0.00" length="30.94" freq="60.00" file="e2output.xml" friendlyPos="1"/>
+    <laneAreaDetector id="EntruperWeg.S.7_1" lane="EntruperWeg.S.7_1" pos="21.00" length="50.00" freq="60.00" file="e2output.xml"/>
+    <laneAreaDetector id="EntruperWeg.S.7_2" lane="EntruperWeg.S.7_2" pos="21.00" length="50.00" freq="60.00" file="e2output.xml"/>
+    <laneAreaDetector id="EntruperWeg.S.7_3" lane="EntruperWeg.S.7_3" pos="21.00" length="50.00" freq="60.00" file="e2output.xml"/>
+    <laneAreaDetector file="e2output.xml" freq="60" friendlyPos="x" id="EntruperWeg.S.8_1" lane="EntruperWeg.S.8_1" length="5.8100000000000005" pos="0" />
+    <laneAreaDetector file="e2output.xml" freq="60" friendlyPos="x" id="EntruperWeg.S.8_2" lane="EntruperWeg.S.8_2" length="5.8100000000000005" pos="0" />
+    <laneAreaDetector file="e2output.xml" freq="60" friendlyPos="x" id="EntruperWeg.S.8_3" lane="EntruperWeg.S.8_3" length="5.8100000000000005" pos="0" />
+    <laneAreaDetector file="e2output.xml" freq="60" friendlyPos="x" id="Gosebrede.N.8_1" lane="Gosebrede.N.8_1" length="45.6" pos="1.4155343563970746e-15" />
+    <laneAreaDetector file="e2output.xml" freq="60" friendlyPos="x" id="Gosebrede.N.8_2" lane="Gosebrede.N.8_2" length="45.6" pos="1.4155343563970746e-15" />
+    <laneAreaDetector file="e2output.xml" freq="60" friendlyPos="x" id="Gosebrede.N.8_3" lane="Gosebrede.N.8_3" length="45.6" pos="1.4155343563970746e-15" />
+    <laneAreaDetector file="e2output.xml" freq="60" friendlyPos="x" id="Richard-Wagner-Strasse.W.6_1" lane="Richard-Wagner-Strasse.W.6_1" length="50" pos="0.65" />
+    <laneAreaDetector file="e2output.xml" freq="60" friendlyPos="x" id="Richard-Wagner-Strasse.W.6_2" lane="Richard-Wagner-Strasse.W.6_2" length="50" pos="0.65" />
+    <laneAreaDetector file="e2output.xml" freq="60" friendlyPos="x" id="Richard-Wagner-Strasse.W.6_3" lane="Richard-Wagner-Strasse.W.6_3" length="50" pos="0.65" />
+
+</additional>
