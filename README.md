@@ -53,7 +53,7 @@ The `main.py` script also supports the Evaluate Mode which can be used to evalua
 │
 ├───envs
 │   ├───sumo_files_owl322	# Contains OWL322 environment related files i.e. SUMO Network file, Additional Files, Traffic Demand and Sumo Config file
-│   └───env_wvc.py	# This script contains TrafficSimulatorBase class which inherits OpenAI Gym Environment			 				
+│   └───env_wvc.py			# This script contains TrafficSimulatorBase class which inherits OpenAI Gym Environment			 				
 │
 │
 ├───lisa_interface	# Contains Middleware code and yaml configuration file
