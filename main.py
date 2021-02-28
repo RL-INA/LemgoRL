@@ -376,6 +376,7 @@ def visualize(args):
     agent, env_config = parse_args_and_init_agent_env(args)
 
     env_config['env_config']['gui'] = True
+    env_config['env_config']['sumo_connector'] = 'traci'
 
     if args.vc_mode:
         env_module = importlib.import_module('envs.' + args.env + '_wvc')

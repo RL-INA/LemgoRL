@@ -280,11 +280,15 @@ class TrafficSimulatorWvcBase(gym.Env):
                         person_ns_id_list = traci.edge.getLastStepPersonIDs(edge)
                         for person_ns in person_ns_id_list:
                             node.ns_pedestrian_wait_time += traci.person.getWaitingTime(person_ns)
+                        if node.ns_pedestrian_wait_time > 0:
+                            break
 
                     for edge in edge_ew_list:
                         person_ew_id_list = traci.edge.getLastStepPersonIDs(edge)
                         for person_ew in person_ew_id_list:
                             node.ew_pedestrian_wait_time += traci.person.getWaitingTime(person_ew)
+                        if node.ew_pedestrian_wait_time > 0:
+                            break
 
                     # creating new list of lanearea detectors which doesn't throw exception
                     lanearea_detectors_in.append(lane_det_id)

@@ -202,23 +202,30 @@ class LongestQueueFirstPolicyLemgoWvc:
                 self.greentime[controlled_node] = 0
 
             # Longest Wave first policy implemented below
-            elif wave_length_dict[curr_phase] < MIN_WAVE or self.greentime[controlled_node] > MAX_GREENTIME:
+            else:
                 if curr_phase == 2 or curr_phase == 3 or curr_phase == 4:
-                    self.node_phase_demand_dict[controlled_node]['E_W'] = 0
-                    if wave_length_dict[4] > MIN_WAVE:
-                        new_phase = 4
-                    else:
-                        new_phase = 7
-                        self.node_phase_demand_dict[controlled_node]['N_S'] += 1
-                        self.greentime[controlled_node] = 0
-                elif curr_phase == 6 or curr_phase == 7 or curr_phase == 8:
-                    self.node_phase_demand_dict[controlled_node]['N_S'] = 0
-                    if wave_length_dict[8] > MIN_WAVE:
-                        new_phase = 8
-                    else:
-                        new_phase = 3
-                        self.node_phase_demand_dict[controlled_node]['E_W'] += 1
-                        self.greentime[controlled_node] = 0
+                    orthogonal_phase = 7
+                else:
+                    orthogonal_phase = 3
+                if wave_length_dict[curr_phase] < wave_length_dict[orthogonal_phase]:
+                    if curr_phase == 2 or curr_phase == 3 or curr_phase == 4:
+                        self.node_phase_demand_dict[controlled_node]['E_W'] = 0
+                        if (wave_length_dict[curr_phase] < MIN_WAVE) and (wave_length_dict[4] > MIN_WAVE) \
+                                and (wave_length_dict[4] > wave_length_dict[7]):
+                            new_phase = 4
+                        else:
+                            new_phase = 7
+                            self.node_phase_demand_dict[controlled_node]['N_S'] += 1
+                            self.greentime[controlled_node] = 0
+                    elif curr_phase == 6 or curr_phase == 7 or curr_phase == 8:
+                        self.node_phase_demand_dict[controlled_node]['N_S'] = 0
+                        if (wave_length_dict[curr_phase] < MIN_WAVE) and (wave_length_dict[8] > MIN_WAVE) \
+                                and (wave_length_dict[8] > wave_length_dict[3]):
+                            new_phase = 8
+                        else:
+                            new_phase = 3
+                            self.node_phase_demand_dict[controlled_node]['E_W'] += 1
+                            self.greentime[controlled_node] = 0
 
             if self.pedestrian_control:
                 if new_phase == 7 and ns_pedestrian > 0:
