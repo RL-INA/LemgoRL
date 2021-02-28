@@ -8,7 +8,7 @@ Associated paper is available at: <<Published Paper link goes here>>
 
 - Simulation model of real-world intersection of Lemgo in SUMO (Simulation of Urban MObility)
 - Real-world vehicle and pedestrian traffic demand modeling of the intersection
-- Traffic Engineering through Traffic Signal Logic Unit (Lisa+ OmlFgServer: <<Link to more details>>)
+- Traffic Engineering through Traffic Signal Logic Unit ([Lisa+ OmlFgServer](https://github.com/vishalrangras/LemgoRLTemp#omlfgserver-and-traffic-signal-logic-unit))
 - OpenAI Gym based environment to train RL Agents
 - Middleware to facilitate communication between environment controller and Traffic Signal Logic Unit (TSLU).
 - Python based Greedy policy implementation to serve as a base policy
