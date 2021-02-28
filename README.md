@@ -47,38 +47,38 @@ The `main.py` script also supports the Evaluate Mode which can be used to evalua
 
 ```bash
 .
-├───config									# Contains configurations of MDP, SUMO and Greedy Policy
-│	└───excelparser_parameters.py			# Utility file to process parameters from xls files
+├───config							# Contains configurations of MDP, SUMO and Greedy Policy
+│	└───excelparser_parameters.py	# Utility file to process parameters from xls files
 │	
 │
 ├───envs
-│   ├───sumo_files_owl322 					# Contains OWL322 environment related files
-│	│										# i.e. SUMO Network file, Additional Files, Traffic Demand and Sumo Config file
+│   ├───sumo_files_owl322 			# Contains OWL322 environment related files
+│	│								# i.e. SUMO Network file, Additional Files, Traffic Demand and Sumo Config file
 │	│
-│   ├───env_wvc.py							# This script contains TrafficSimulatorBase class which inherits OpenAI Gym Environment			 
-│	└───owl322_wvc.py						# This script contains extended class of TrafficSimulatorBase for OWL322 environment				
+│   ├───env_wvc.py					# This script contains TrafficSimulatorBase class which inherits OpenAI Gym Environment			 
+│	└───owl322_wvc.py				# This script contains extended class of TrafficSimulatorBase for OWL322 environment				
 │
-├───lisa_interface                          # Contains Middleware code
-│   ├───lisa_conf							# Contains YAML configuration file which maps the Lisa+ Signal Groups with SUMO Link Indices
+├───lisa_interface                  # Contains Middleware code
+│   ├───lisa_conf					# Contains YAML configuration file which maps the Lisa+ Signal Groups with SUMO Link Indices
 │	│
-│	└───middleware.py						# Contains middleware code which processes communication between environment controller and TSLU
+│	└───middleware.py				# Contains middleware code which processes communication between environment controller and TSLU
 │
 │
-├───lisa_vissim_addon                       # User needs to create this directory and place OmlFgServer.jar in this directory
+├───lisa_vissim_addon               # User needs to create this directory and place OmlFgServer.jar in this directory
 │
 │
-├───results									# This directory will be auto-generated in evaluate mode and will contain evaluation results
+├───results							# This directory will be auto-generated in evaluate mode and will contain evaluation results
 │ 
-├───virtual_controller						# Contains Traffic Engineering code provided by Stuhrenberg GmbH
+├───virtual_controller				# Contains Traffic Engineering code provided by Stuhrenberg GmbH
 │   └───Lemgo_OWL322_2021.02.10_VISSIM
 │
-├───environment.yml							# YAML file to create anaconda environment for LemgoRL code execution
+├───environment.yml					# YAML file to create anaconda environment for LemgoRL code execution
 │
-├───greedy.py								# This script contains Greedy Policy provided as base policy
+├───greedy.py						# This script contains Greedy Policy provided as base policy
 │
-├───main.py									# This script is provided as a test script to run the LemgoRL environment simulation in visualize and evaluate mode.
+├───main.py							# This script is provided as a test script to run the LemgoRL environment simulation in visualize and evaluate mode.
 │
-└───utils.py								# This script contains static methods to plot graphs for evaluation mode.
+└───utils.py						# This script contains static methods to plot graphs for evaluation mode.
 ```
 
 #### Using the OWL322 Environment
