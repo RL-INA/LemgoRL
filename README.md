@@ -47,20 +47,19 @@ The `main.py` script also supports the Evaluate Mode which can be used to evalua
 
 ```bash
 .
-├───config							# Contains configurations of MDP, SUMO and Greedy Policy
+├───config	# Contains configurations of MDP, SUMO and Greedy Policy
 │	└───excelparser_parameters.py	# Utility file to process parameters from xls files
 │	
 │
 ├───envs
-│   ├───sumo_files_owl322 			# Contains OWL322 environment related files
-│	│								# i.e. SUMO Network file, Additional Files, Traffic Demand and Sumo Config file
-│	│
-│   ├───env_wvc.py					# This script contains TrafficSimulatorBase class which inherits OpenAI Gym Environment			 
-│	└───owl322_wvc.py				# This script contains extended class of TrafficSimulatorBase for OWL322 environment				
+│   ├───sumo_files_owl322	# Contains OWL322 environment related files i.e. SUMO Network file, Additional Files, Traffic Demand and Sumo Config file
+│   ├───env_wvc.py	# This script contains TrafficSimulatorBase class which inherits OpenAI Gym Environment			 
+│	└───owl322_wvc.py	# This script contains extended class of TrafficSimulatorBase for OWL322 environment				
+│
+│
 │
 ├───lisa_interface                  # Contains Middleware code
 │   ├───lisa_conf					# Contains YAML configuration file which maps the Lisa+ Signal Groups with SUMO Link Indices
-│	│
 │	└───middleware.py				# Contains middleware code which processes communication between environment controller and TSLU
 │
 │
@@ -68,6 +67,8 @@ The `main.py` script also supports the Evaluate Mode which can be used to evalua
 │
 │
 ├───results							# This directory will be auto-generated in evaluate mode and will contain evaluation results
+│
+│
 │ 
 ├───virtual_controller				# Contains Traffic Engineering code provided by Stuhrenberg GmbH
 │   └───Lemgo_OWL322_2021.02.10_VISSIM
