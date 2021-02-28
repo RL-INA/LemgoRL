@@ -53,14 +53,13 @@ The `main.py` script also supports the Evaluate Mode which can be used to evalua
 │
 ├───envs
 │   ├───sumo_files_owl322	# Contains OWL322 environment related files i.e. SUMO Network file, Additional Files, Traffic Demand and Sumo Config file
-│   ├───env_wvc.py	# This script contains TrafficSimulatorBase class which inherits OpenAI Gym Environment			 
-│	└───owl322_wvc.py	# This script contains extended class of TrafficSimulatorBase for OWL322 environment				
+│   └───env_wvc.py	# This script contains TrafficSimulatorBase class which inherits OpenAI Gym Environment			 				
 │
 │
 │
-├───lisa_interface                  # Contains Middleware code
-│   ├───lisa_conf					# Contains YAML configuration file which maps the Lisa+ Signal Groups with SUMO Link Indices
-│	└───middleware.py				# Contains middleware code which processes communication between environment controller and TSLU
+├───lisa_interface                  # Contains Middleware code and yaml configuration file
+│   ├───middleware.py					# Contains YAML configuration file which maps the Lisa+ Signal Groups with SUMO Link Indices
+│	└───lisa_conf				# Contains middleware code which processes communication between environment controller and TSLU
 │
 │
 ├───lisa_vissim_addon               # User needs to create this directory and place OmlFgServer.jar in this directory
