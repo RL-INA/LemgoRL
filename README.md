@@ -56,29 +56,30 @@ The `main.py` script also supports the Evaluate Mode which can be used to evalua
 │   └───env_wvc.py	# This script contains TrafficSimulatorBase class which inherits OpenAI Gym Environment			 				
 │
 │
-│
-├───lisa_interface                  # Contains Middleware code and yaml configuration file
-│   ├───middleware.py					# Contains YAML configuration file which maps the Lisa+ Signal Groups with SUMO Link Indices
-│	└───lisa_conf				# Contains middleware code which processes communication between environment controller and TSLU
+├───lisa_interface	# Contains Middleware code and yaml configuration file
+│   └───middleware.py	# Contains middleware code which processes communication between environment controller and TSLU
 │
 │
-├───lisa_vissim_addon               # User needs to create this directory and place OmlFgServer.jar in this directory
+├───lisa_vissim_addon	# User needs to create this directory and place OmlFgServer.jar in this directory
 │
 │
-├───results							# This directory will be auto-generated in evaluate mode and will contain evaluation results
-│
+├───results		# This directory will be auto-generated in evaluate mode and will contain evaluation results
 │
 │ 
-├───virtual_controller				# Contains Traffic Engineering code provided by Stuhrenberg GmbH
+├───virtual_controller	# Contains Traffic Engineering code provided by Stuhrenberg GmbH
 │   └───Lemgo_OWL322_2021.02.10_VISSIM
 │
-├───environment.yml					# YAML file to create anaconda environment for LemgoRL code execution
 │
-├───greedy.py						# This script contains Greedy Policy provided as base policy
+├───environment.yml	# YAML file to create anaconda environment for LemgoRL code execution
 │
-├───main.py							# This script is provided as a test script to run the LemgoRL environment simulation in visualize and evaluate mode.
 │
-└───utils.py						# This script contains static methods to plot graphs for evaluation mode.
+├───greedy.py	# This script contains Greedy Policy provided as base policy
+│
+│
+├───main.py	# This script is provided as a test script to run the LemgoRL environment simulation in visualize and evaluate mode.
+│
+│
+└───utils.py	# This script contains static methods to plot graphs for evaluation mode.
 ```
 
 #### Using the OWL322 Environment
