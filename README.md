@@ -2,6 +2,8 @@
 
 LemgoRL is an open-source benchmark tool for traffic signal control designed to train reinforcement learning agents in a highly realistic simulation scenario with the aim to reduce Sim2Real gap.
 
+![alt text](./process_diagram.png "Process Diagram")
+
 Associated paper is available at: <<Published Paper link goes here>>
 
 #### Key Features:
