@@ -279,14 +279,14 @@ class TrafficSimulatorWvcBase(gym.Env):
                     for edge in edge_ns_list:
                         person_ns_id_list = traci.edge.getLastStepPersonIDs(edge)
                         for person_ns in person_ns_id_list:
-                            node.ns_pedestrian_wait_time += traci.person.getWaitingTime(person_ns)
+                            node.ns_pedestrian_wait_time += 1
                         if node.ns_pedestrian_wait_time > 0:
                             break
 
                     for edge in edge_ew_list:
                         person_ew_id_list = traci.edge.getLastStepPersonIDs(edge)
                         for person_ew in person_ew_id_list:
-                            node.ew_pedestrian_wait_time += traci.person.getWaitingTime(person_ew)
+                            node.ew_pedestrian_wait_time += 1
                         if node.ew_pedestrian_wait_time > 0:
                             break
 
