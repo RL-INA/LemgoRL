@@ -5,7 +5,8 @@
        <net-file value="sumo.net.xml"/>
        <!-- <route-files value="vehicle_demand.rou.xml"/>  -->
 	   <!-- <route-files value="flows.rou.xml"/>  -->
-	   <route-files value=" BusRoutes_City.rou.xml, vehicle_types.rou.xml, od_flows.rou.xml"/>
+	   <!-- pedestrian_flows.rou.xml -->
+	   <route-files value=" BusRoutes_City.rou.xml, vehicle_types.rou.xml, od_flows.rou.xml, pedestrian_flows.rou.xml"/>
 <!-- pedestrian_demand.rou.xml	    -->
 	   <!-- flows.rou.xml, -->
 	   <!-- ,Lemgo_manual.rou.xml -->
