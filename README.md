@@ -45,6 +45,8 @@ The `main.py` script also supports the Evaluate Mode which can be used to evalua
 
 `python main.py evaluate`
 
+![alt text](./evaluation-sample.png "Evaluation Sample")
+
 #### Project Structure
 
 ```bash
