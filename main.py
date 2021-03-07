@@ -78,7 +78,7 @@ def parse_args():
     parser.add_argument('--data-dir',
                         type=str,
                         required=False,
-                        default='./virtual_controller/Lemgo_OWL322_2021.02.10_VISSIM/',
+                        default='./virtual_controller/VISSIM_OWL322/',
                         help="Data directory for Lisa+ Virtual Controller program files")
     parser.add_argument('--lisa-cfg-file',
                         type=str,
@@ -88,7 +88,7 @@ def parse_args():
     parser.add_argument('--sumo-connector',
                         type=str,
                         required=False,
-                        default='traci',
+                        default='libsumo',
                         help="Choose sumo-connector from traci and libsumo. Default is traci.",
                         choices=['traci', 'libsumo'])
 
