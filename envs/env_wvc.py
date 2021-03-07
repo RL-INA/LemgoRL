@@ -117,11 +117,7 @@ class TrafficSimulatorWvcBase(gym.Env):
         nodes = {}
         for node_name in traci.trafficlight.getIDList():
             if self.env_config['env'] == 'lemgo':
-                is_controlled_node = False
-                for controlled_node in self.controlled_nodes:
-                    if node_name == controlled_node:
-                        is_controlled_node = True
-                if not is_controlled_node:
+                if node_name not in self.controlled_nodes:
                     continue
 
             nodes[node_name] = Node(node_name,)

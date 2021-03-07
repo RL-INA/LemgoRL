@@ -1,10 +1,10 @@
 # LemgoRL
 
-LemgoRL is an open-source benchmark tool for traffic signal control designed to train reinforcement learning agents in a highly realistic simulation scenario with the aim to reduce Sim2Real gap.
+LemgoRL is an open-source benchmark tool for traffic signal control designed to train reinforcement learning agents in a highly realistic simulation scenario with the aim to reduce Sim2Real gap. The process diagram of the tool is shown below:
 
 ![alt text](./process_diagram.png "Process Diagram")
 
-Associated paper is available at: <<Published Paper link goes here>>
+Associated paper is available at: `Published Paper link goes here`
 
 #### Key Features:
 
@@ -38,6 +38,14 @@ In order for the Traffic Signal Logic Unit to work, the **Lisa+ OmlFgServer.jar*
 This source code comes with `main.py` script as a test script which can be used to launch the LemgoRL simulation model in SUMO-GUI mode and observe the control of intersection by greedy policy. To do so, following command needs to be executed from the root directory of this project:
 
 `python main.py visualize`
+
+Following are the screenshots of SUMO-GUI showing the intersection OWL322 of Lemgo with real-world traffic demand of cars, heavy vehicles and pedestrians.
+
+![alt text](./Lemgo-RL01.PNG "LemgoRL Model - 1")
+
+**Zoomed in version of the above screenshot:**
+
+![alt text](./Lemgo-RL02-wt.PNG "LemgoRL Model - 2")
 
 #### Evaluate Mode
 
@@ -87,6 +95,8 @@ The `main.py` script also supports the Evaluate Mode which can be used to evalua
 ```
 
 #### Using the OWL322 Environment
+
+`Write here about how to import and initialize the LemgoRL environment in code like Gym Environment`
 
 #### BibTex entry
 

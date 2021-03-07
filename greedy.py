@@ -39,6 +39,13 @@ class LongestQueueFirstPolicyLemgoWvc:
         self.node_phase_demand_dict = {x: {'N_S': 0, 'E_W': 0} for x in self.controlled_nodes}
         self.flawed = False
         self.pedestrian_control = True
+        self.old_logic = False
+        self.curr_ph_list = []
+        self.next_ph_list = []
+        self.wave_e = []
+        self.wave_w = []
+        self.wave_s = []
+        self.wave_n = []
         if len(self.controlled_nodes) == 2:
             self.greentime = {'OWL322': 0, 'Bi308': 0}
         else:
@@ -136,6 +143,31 @@ class LongestQueueFirstPolicyLemgoWvc:
 
         return node_metric_dict
 
+    def _calc_wave(self, state):
+        wav_s = self.state_config['wave_start_ind']
+
+        node_wave_metric = {}
+
+        for controlled_node in self.controlled_nodes:
+            if controlled_node == 'OWL322':
+
+                south_wave = state[wav_s + 0] + state[wav_s + 1] + state[wav_s + 2]
+                north_wave = state[wav_s + 3] + state[wav_s + 4] + state[wav_s + 5]
+                west_wave = state[wav_s + 6] + state[wav_s + 7] + state[wav_s + 8]
+                west_left_wave = state[wav_s + 8]
+                east_wave = state[wav_s + 9] + state[wav_s + 10] + state[wav_s + 11]
+
+                wave_dict = {
+                    's': south_wave,
+                    'n': north_wave,
+                    'w': west_wave,
+                    'wl': west_left_wave,
+                    'e': east_wave
+                }
+
+                node_wave_metric[controlled_node + '_wave_dict'] = wave_dict
+        return node_wave_metric
+
     def _determine_cur_phase(self, state):
         phase_dict = {}
         controlled_node_len = len(self.controlled_nodes)
@@ -166,6 +198,7 @@ class LongestQueueFirstPolicyLemgoWvc:
 
         """
         node_metric_dict = self._calc_queue_length_and_wave(state)
+        node_wave_metric_dict = self._calc_wave(state)
         phase_dict = self._determine_cur_phase(state)
         logger.debug('Queue length and Wave Dict:')
         logger.debug(node_metric_dict)
@@ -180,9 +213,15 @@ class LongestQueueFirstPolicyLemgoWvc:
             ew_pedestrian = state[len(state) - (controlled_node_len*subtraction_val) + 1]
             self.greentime[controlled_node] += 1
             curr_phase = phase_dict[controlled_node]
+            self.curr_ph_list.append(curr_phase)
             new_phase = curr_phase
             queue_length_dict = node_metric_dict[controlled_node + '_queue_dict']
             wave_length_dict = node_metric_dict[controlled_node + '_wave_dict']
+            wave_dict = node_wave_metric_dict[controlled_node + '_wave_dict']
+            self.wave_e.append(wave_dict['e'])
+            self.wave_w.append(wave_dict['w'])
+            self.wave_n.append(wave_dict['n'])
+            self.wave_s.append(wave_dict['s'])
 
             # Phase 1 is all Red. Phase 3 or Phase 7 kick starts the traffic lights.
 
@@ -193,7 +232,7 @@ class LongestQueueFirstPolicyLemgoWvc:
                     new_phase = 3
                 self.greentime[controlled_node] = 0
 
-            elif curr_phase == 1:
+            elif curr_phase == 1 and self.old_logic:
                 if self.node_phase_demand_dict[controlled_node]['N_S'] > \
                         self.node_phase_demand_dict[controlled_node]['E_W'] or wave_length_dict[7] > MIN_WAVE:
                     new_phase = 7
@@ -201,31 +240,76 @@ class LongestQueueFirstPolicyLemgoWvc:
                     new_phase = 3
                 self.greentime[controlled_node] = 0
 
+            elif curr_phase == 1:
+                if self.node_phase_demand_dict[controlled_node]['N_S'] > \
+                        self.node_phase_demand_dict[controlled_node]['E_W']\
+                        or (wave_dict['n'] + wave_dict['s']) > MIN_WAVE:
+                    new_phase = 7
+                else:
+                    new_phase = 3
+                self.greentime[controlled_node] = 0
+
             # Longest Wave first policy implemented below
             else:
-                if curr_phase == 2 or curr_phase == 3 or curr_phase == 4:
-                    orthogonal_phase = 7
-                else:
-                    orthogonal_phase = 3
-                if wave_length_dict[curr_phase] < wave_length_dict[orthogonal_phase]:
-                    if curr_phase == 2 or curr_phase == 3 or curr_phase == 4:
+                if self.old_logic:
+                    if curr_phase in [2, 3, 4, 5]:
+                        curr_dir_wave_length = wave_length_dict[3] + wave_length_dict[4]
+                        orthogonal_wave_length = wave_length_dict[7] + wave_length_dict[8]
                         self.node_phase_demand_dict[controlled_node]['E_W'] = 0
-                        if (wave_length_dict[curr_phase] < MIN_WAVE) and (wave_length_dict[4] > MIN_WAVE) \
-                                and (wave_length_dict[4] > wave_length_dict[7]):
+                        if curr_dir_wave_length < orthogonal_wave_length:
+                            new_phase = 7
+                            self.node_phase_demand_dict[controlled_node]['N_S'] += 1
+                            self.greentime[controlled_node] = 0
+                        elif wave_length_dict[curr_phase] < wave_length_dict[4]:
+                            new_phase = 4
+                        else:
+                            new_phase = 3
+                    else:
+                        curr_dir_wave_length = wave_length_dict[7] + wave_length_dict[8]
+                        orthogonal_wave_length = wave_length_dict[3] + wave_length_dict[4]
+                        self.node_phase_demand_dict[controlled_node]['N_S'] = 0
+                        if curr_dir_wave_length < orthogonal_wave_length:
+                            new_phase = 3
+                            self.node_phase_demand_dict[controlled_node]['E_W'] += 1
+                            self.greentime[controlled_node] = 0
+                        elif wave_length_dict[curr_phase] < wave_length_dict[8]:
+                            new_phase = 8
+                        else:
+                            new_phase = 7
+                else:
+                    if curr_phase == 2 or curr_phase == 3:
+                        self.node_phase_demand_dict[controlled_node]['E_W'] = 0
+                        curr_ph_wave_length = wave_dict['e'] + wave_dict['w']
+                        orth_ph_wave_length = wave_dict['n'] + wave_dict['s']
+                        if curr_ph_wave_length < orth_ph_wave_length and wave_dict['e'] < MIN_WAVE:
+                            if wave_dict['wl'] > MIN_WAVE/3:
+                                new_phase = 4
+                            else:
+                                new_phase = 7
+                                self.node_phase_demand_dict[controlled_node]['N_S'] += 1
+                                self.greentime[controlled_node] = 0
+                        else:
+                            new_phase = 3
+                    elif curr_phase == 4:
+                        self.node_phase_demand_dict[controlled_node]['E_W'] = 0
+                        if wave_dict['wl'] > MIN_WAVE/3:
                             new_phase = 4
                         else:
                             new_phase = 7
                             self.node_phase_demand_dict[controlled_node]['N_S'] += 1
                             self.greentime[controlled_node] = 0
-                    elif curr_phase == 6 or curr_phase == 7 or curr_phase == 8:
+                    else:
+                        curr_ph_wave_length = wave_dict['n'] + wave_dict['s']
+                        orth_ph_wave_length = wave_dict['e'] + wave_dict['w']
                         self.node_phase_demand_dict[controlled_node]['N_S'] = 0
-                        if (wave_length_dict[curr_phase] < MIN_WAVE) and (wave_length_dict[8] > MIN_WAVE) \
-                                and (wave_length_dict[8] > wave_length_dict[3]):
-                            new_phase = 8
-                        else:
+                        if curr_ph_wave_length < orth_ph_wave_length:
                             new_phase = 3
                             self.node_phase_demand_dict[controlled_node]['E_W'] += 1
                             self.greentime[controlled_node] = 0
+                        elif wave_dict['n'] > wave_dict['s'] and wave_dict['s'] < MIN_WAVE:
+                            new_phase = 8
+                        else:
+                            new_phase = curr_phase
 
             if self.pedestrian_control:
                 if new_phase == 7 and ns_pedestrian > 0:
@@ -233,12 +317,14 @@ class LongestQueueFirstPolicyLemgoWvc:
                 elif new_phase == 3 and ew_pedestrian > 0:
                     new_phase = 2
 
+            self.next_ph_list.append(new_phase)
+
             logger.debug(f"N_S Ped: {ns_pedestrian}")
             logger.debug(f"E_W Ped: {ew_pedestrian}")
 
             actions[controlled_node] = new_phase
             logger.debug('Current Node: %s, Current Phase: %s, Computed next Phase: %s'
-                        % (controlled_node, curr_phase, new_phase))
+                         % (controlled_node, curr_phase, new_phase))
             logger.debug('Node Phase Demand of OWL322: %s' % self.node_phase_demand_dict['OWL322'])
 
         logger.debug('Green Times after computing actions:')

@@ -27,4 +27,5 @@ dependencies:
         - opencv-python
         - openpyxl
         - sumolib
+        - Deprecated
 
