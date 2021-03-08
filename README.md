@@ -17,10 +17,6 @@ Associated paper is available at: `Published Paper link goes here`
 - Evaluation function to plot graphs of queue length, average speed and wait time w.r.t. simulation time and w.r.t. episodes.
 - Visualize function to see the graphical simulation of the traffic and control of intersection by greedy policy in SUMO-GUI.
 
-#### License:
-
-- MIT or GNU GPL V3
-
 #### OmlFgServer and Traffic Signal Logic Unit
 
 In order for the Traffic Signal Logic Unit to work, the **Lisa+ OmlFgServer.jar** is needed. The Lisa+ OmlFgServer.jar is a proprietary Virtual Controller Server for traffic lights which can be purchased from the company **Schlothauer & Wauer**. Since it is a proprietary product, it cannot be shipped with this LemgoRL open-source repository.
@@ -98,7 +94,35 @@ The `main.py` script also supports the Evaluate Mode which can be used to evalua
 
 `Write here about how to import and initialize the LemgoRL environment in code like Gym Environment`
 
+#### Contributing to this project
+Copied from https://github.com/othneildrew/Best-README-Template/blob/master/README.md
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+    Fork the Project
+    Create your Feature Branch (git checkout -b feature/AmazingFeature)
+    Commit your Changes (git commit -m 'Add some AmazingFeature')
+    Push to the Branch (git push origin feature/AmazingFeature)
+    Open a Pull Request
+
+
+#### License:
+
+- MIT or GNU GPL V3
+
 #### BibTex entry
 
-#### Contributing to this project
+#### Contact
+Arthur Müller: arthur.mueller@iosb-ina.fraunhofer.de
+Vishal Rangras: vishal.rangras@iosb-ina.fraunhofer.de
+
+#### Ackknowledgements
+This work is part of the [KI4LSA](https://www.iosb-ina.fraunhofer.de/de/geschaeftsbereiche/maschinelles-lernen/forschungsthemen-und-projekte/projekt-KI4LSA.html) 
+(Artificial Intelligence for Traffic Light Systems) 
+project and was supported by the 
+German Federal Ministry of Transport and Digital Infrastructure (BMVI).
+![alt text](./Logo_KI4LSA.png "Logo KI4LSA")
+![alt text](./Logo_BMVI "Logo BMVI")
+
+
+
 
