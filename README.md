@@ -106,10 +106,10 @@ Contributions are what make the open source community such an amazing place to b
 
 
 #### License:
-
-- MIT or GNU GPL V3
+GNU GPL V3.0
 
 #### BibTex entry
+If you want to cite this work, please use the following BibTex entry:
 
 #### Contact
 Arthur Müller: arthur.mueller@iosb-ina.fraunhofer.de
@@ -120,8 +120,8 @@ This work is part of the [KI4LSA](https://www.iosb-ina.fraunhofer.de/de/geschaef
 (Artificial Intelligence for Traffic Light Systems) 
 project and was supported by the 
 German Federal Ministry of Transport and Digital Infrastructure (BMVI).
-![alt text](./Logo_KI4LSA.png "Logo KI4LSA")
-![alt text](./Logo_BMVI "Logo BMVI")
+![alt text](./Logo_KI4LSA.png "Logo KI4LSA" | width=100)
+![alt text](./Logo_BMVI.jpg "Logo BMVI")
 
 
 
