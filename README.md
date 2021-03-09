@@ -95,24 +95,23 @@ The `main.py` script also supports the Evaluate Mode which can be used to evalua
 `Write here about how to import and initialize the LemgoRL environment in code like Gym Environment`
 
 #### Contributing to this project
-Copied from https://github.com/othneildrew/Best-README-Template/blob/master/README.md
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
-
-    Fork the Project
-    Create your Feature Branch (git checkout -b feature/AmazingFeature)
-    Commit your Changes (git commit -m 'Add some AmazingFeature')
-    Push to the Branch (git push origin feature/AmazingFeature)
-    Open a Pull Request
-
+Any contributions you make are greatly appreciated.
+You can contribute in several ways:
+- report bugs
+- fix bugs
+- suggest features
+- implement features
+- write documentation
 
 #### License:
-GNU GPL V3.0
+Distributed under the GNU GPL V3.0 License.
 
-#### BibTex entry
+#### Citation
 If you want to cite this work, please use the following BibTex entry:
 
 #### Contact
-Arthur Müller: arthur.mueller@iosb-ina.fraunhofer.de
+Arthur Müller: arthur.mueller@iosb-ina.fraunhofer.de    
+&nbsp;
 Vishal Rangras: vishal.rangras@iosb-ina.fraunhofer.de
 
 #### Ackknowledgements
