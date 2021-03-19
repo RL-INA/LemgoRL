@@ -5,7 +5,7 @@ LemgoRL is an open-source benchmark tool for traffic signal control designed to 
 
 ![alt text](./process_diagram.png "Process Diagram")
 
-Associated paper is available at: `Published Paper link goes here`
+Associated paper is available at: `will be provided soon`
 
 #### Key Features:
 
@@ -114,8 +114,7 @@ If you want to cite this work, please use the following BibTex entry:
 
 #### Contact
 Arthur Müller: arthur.mueller@iosb-ina.fraunhofer.de    
-&nbsp;
-Vishal Rangras: vishal.rangras@iosb-ina.fraunhofer.de
+&nbsp;Vishal Rangras: vishal.rangras@iosb-ina.fraunhofer.de
 
 #### Ackknowledgements
 This work is part of the [KI4LSA](https://www.iosb-ina.fraunhofer.de/de/geschaeftsbereiche/maschinelles-lernen/forschungsthemen-und-projekte/projekt-KI4LSA.html) 
