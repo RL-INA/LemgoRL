@@ -113,7 +113,7 @@ If you want to cite this work, please use the following BibTex entry:
 `will be provided soon`
 
 #### Contact
-Arthur Müller: arthur.mueller@iosb-ina.fraunhofer.de    
+Arthur Müller: arthur.mueller@iosb-ina.fraunhofer.de   
 &nbsp;Vishal Rangras: vishal.rangras@iosb-ina.fraunhofer.de
 
 #### Ackknowledgements
