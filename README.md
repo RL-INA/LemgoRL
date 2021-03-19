@@ -1,4 +1,5 @@
 # LemgoRL
+[![Demo with greedy policy and virtual LISA controller in SUMO](https://img.youtube.com/vi/MNPH1k5h1-g/0.jpg)](https://www.youtube.com/watch?v=MNPH1k5h1-g)
 
 LemgoRL is an open-source benchmark tool for traffic signal control designed to train reinforcement learning agents in a highly realistic simulation scenario with the aim to reduce Sim2Real gap. The process diagram of the tool is shown below:
 
