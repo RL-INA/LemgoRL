@@ -1,0 +1,2 @@
+COPYRIGHT 2021 Georg Schnittker and Michael Waldmann, both with Stührenberg GmbH in 32758 Detmold, Germany
+Alles files in the folder VISSIM_OWL322 are under this copyright.

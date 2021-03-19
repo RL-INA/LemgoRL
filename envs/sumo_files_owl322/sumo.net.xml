@@ -1,40 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2021 Arthur Müller
+arthur.mueller@iosb-ina.fraunhofer.de
+This file is part of LemgoRL.
 
-<!-- generated on 12.02.2021 16:53:47 by Eclipse SUMO netedit Version UNKNOWN
-<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+LemgoRL is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-    <input>
-        <sumo-net-file value="C:\KI4LSA\Code\sumo_files_lemgo_owl322\shrinked\sumo_shrinked12.net.xml"/>
-    </input>
+LemgoRL is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-    <output>
-        <output-file value="C:\KI4LSA\Code\sumo_files_lemgo_owl322\shrinked\sumo_shrinked12.net.xml"/>
-    </output>
-
-    <processing>
-        <geometry.min-radius.fix.railways value="false"/>
-        <geometry.max-grade.fix value="false"/>
-        <offset.disable-normalization value="true"/>
-        <lefthand value="false"/>
-    </processing>
-
-    <junctions>
-        <no-internal-links value="false"/>
-        <no-turnarounds value="true"/>
-        <junctions.corner-detail value="5"/>
-        <junctions.limit-turn-speed value="5.5"/>
-        <rectangular-lane-cut value="false"/>
-    </junctions>
-
-    <pedestrian>
-        <walkingareas value="false"/>
-    </pedestrian>
-
-    <report>
-        <aggregate-warnings value="5"/>
-    </report>
-
-</configuration>
+You should have received a copy of the GNU General Public License
+along with LemgoRL.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
 <net version="1.6" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">

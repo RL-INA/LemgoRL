@@ -1,4 +1,21 @@
 """
+Copyright 2021 Arthur Müller and Vishal Rangras
+This file is part of LemgoRL.
+
+LemgoRL is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+LemgoRL is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with LemgoRL.  If not, see <http://www.gnu.org/licenses/>.
+
+----------------
 This script maps the Gym custom environment to the Traffic Simulation
 environment of SUMO, with the Lisa+ Virtual Controller in loop.
 TrafficSimulatorWvcBase is the base implementation of simulation environment.

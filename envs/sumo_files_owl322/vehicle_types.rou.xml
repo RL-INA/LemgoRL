@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2021 Arthur Müller
+arthur.mueller@iosb-ina.fraunhofer.de
+This file is part of LemgoRL.
 
+LemgoRL is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
+LemgoRL is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with LemgoRL.  If not, see <http://www.gnu.org/licenses/>.
+-->
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
     <vType id="truck" vClass="truck" speedFactor="normc(1,0.1,0.2,1.3)"/>

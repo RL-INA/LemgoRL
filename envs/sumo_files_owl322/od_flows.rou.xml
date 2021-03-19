@@ -1,3 +1,21 @@
+<!--
+Copyright 2021 Arthur Müller
+arthur.mueller@iosb-ina.fraunhofer.de
+This file is part of LemgoRL.
+
+LemgoRL is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+LemgoRL is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with LemgoRL.  If not, see <http://www.gnu.org/licenses/>.
+-->
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
 	<flow id="0" begin="15:00:00" end="15:05:00" probability="0.11400000000000002" type="car" fromTaz="3" toTaz="1" departLane="free" departSpeed="max"/>
 	<flow id="1" begin="15:00:00" end="15:05:00" probability="0.009000000000000001" type="car" fromTaz="3" toTaz="2" departLane="free" departSpeed="max"/>
