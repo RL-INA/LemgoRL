@@ -15,7 +15,7 @@
    </input>
 <time>
        <begin value="15:00:00"/>					<!-- default: 0, value in seconds or in hh:mm:ss-->
-	   <end value="16:30:00"/>					<!-- default: -1(Simulation runs till all vehicles have left the net), value in seconds or in hh:mm:ss-->
+	   <end value="16:10:00"/>					<!-- default: -1(Simulation runs till all vehicles have left the net), value in seconds or in hh:mm:ss-->
    </time>
    <processing>
     <lateral-resolution value="0.64" />			<!-- default: -1,    if set the sublane module is activated-->

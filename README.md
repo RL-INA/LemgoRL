@@ -109,6 +109,8 @@ Distributed under the GNU GPL V3.0 License.
 #### Citation
 If you want to cite this work, please use the following BibTex entry:
 
+`will be provided soon`
+
 #### Contact
 Arthur Müller: arthur.mueller@iosb-ina.fraunhofer.de    
 &nbsp;
