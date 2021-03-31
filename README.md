@@ -5,7 +5,7 @@ LemgoRL is an open-source benchmark tool for traffic signal control designed to 
 
 ![alt text](./process_diagram.png "Process Diagram")
 
-Associated paper is available at: `will be provided soon`
+Associated paper is available at: https://arxiv.org/abs/2103.16223
 
 #### Key Features:
 
@@ -110,7 +110,14 @@ Distributed under the GNU GPL V3.0 License.
 #### Citation
 If you want to cite this work, please use the following BibTex entry:
 
-`will be provided soon`
+`
+@misc{müller2021lemgorl,
+ title={LemgoRL: An open-source Benchmark Tool to Train Reinforcement Learning Agents for Traffic Signal Control in a real-world simulation scenario}, author={Arthur Müller and Vishal Rangras and Georg Schnittker and Michael Waldmann and Maxim Friesen and Tobias Ferfers and Lukas Schreckenberg and Florian Hufen and Jürgen Jasperneite and Marco Wiering},
+year={2021},
+eprint={2103.16223},
+archivePrefix={arXiv},
+primaryClass={cs.LG}
+}`
 
 #### Contact
 Arthur Müller: arthur.mueller@iosb-ina.fraunhofer.de   
