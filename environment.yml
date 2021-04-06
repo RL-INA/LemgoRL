@@ -28,4 +28,5 @@ dependencies:
         - openpyxl
         - sumolib
         - Deprecated
+        - requests
 

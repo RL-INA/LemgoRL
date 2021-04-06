@@ -22,13 +22,18 @@ Associated paper is available at: https://arxiv.org/abs/2103.16223
 
 In order for the Traffic Signal Logic Unit to work, the **Lisa+ OmlFgServer.jar** is needed. The Lisa+ OmlFgServer.jar is a proprietary Virtual Controller Server for traffic lights which can be purchased from the company **Schlothauer & Wauer**. Since it is a proprietary product, it cannot be shipped with this LemgoRL open-source repository.
 
+#### Prerequisite
+
+1. Download and install SUMO (Simulation of Urban MObility) for your platform from https://sumo.dlr.de/docs/Downloads.php, if not already installed.
+2. Download and install JRE or JDK 8 for your platform from https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html, as it is needed by LemgoRL in order to run OmlFgServer.jar.
+
 #### Installation Steps
 
 1. Install Microsoft Visual C++ 14.0 from https://aka.ms/vs/16/release/vc_redist.x64.exe
 2. Install Anaconda / Miniconda from https://www.anaconda.com/products/individual
 3. In anaconda prompt, execute the command `conda env create -f environment.yml`. This command will create an anaconda environment "LemgoRL".
 4. Activate the anaconda environment with the command `conda activate LemgoRL` for Windows or `activate LemgoRL` for Linux/Unix/Mac.
-5. Create a directory `lisa_vissim_addon` in root directory of this project and place the OmlFgServer.jar procurred from the company **Schlothauer & Wauer** in this directory.
+5. Create a directory `lisa_vissim_addon` in root directory of this project and place the OmlFgServer.jar procured from the company **Schlothauer & Wauer** in this directory.
 
 #### Visualize Mode
 
