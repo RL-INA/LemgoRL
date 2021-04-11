@@ -1,5 +1,5 @@
 """
-Copyright 2021 Arthur Müller and Vishal Rangras
+Copyright 2021 Arthur M�ller and Vishal Rangras
 This file is part of LemgoRL.
 
 LemgoRL is free software: you can redistribute it and/or modify
@@ -54,6 +54,8 @@ class Node:
         self.len_lanes_in = None
         self.ns_pedestrian_wait_time = 0
         self.ew_pedestrian_wait_time = 0
+        self.ns_person_dict = {}
+        self.ew_person_dict = {}
 
 
 class TrafficSimulatorWvcBase(gym.Env):
@@ -286,21 +288,21 @@ class TrafficSimulatorWvcBase(gym.Env):
 
                     if node.cur_phase_id == 6:
                         node.ns_pedestrian_wait_time = 0
+                        node.ns_person_dict.clear()
                     elif node.cur_phase_id == 2:
                         node.ew_pedestrian_wait_time = 0
+                        node.ew_person_dict.clear()
 
                     for edge in edge_ns_list:
                         person_ns_id_list = traci.edge.getLastStepPersonIDs(edge)
                         for person_ns in person_ns_id_list:
                             node.ns_pedestrian_wait_time += 1
-                        if node.ns_pedestrian_wait_time > 0:
                             break
 
                     for edge in edge_ew_list:
                         person_ew_id_list = traci.edge.getLastStepPersonIDs(edge)
                         for person_ew in person_ew_id_list:
                             node.ew_pedestrian_wait_time += 1
-                        if node.ew_pedestrian_wait_time > 0:
                             break
 
                     # creating new list of lanearea detectors which doesn't throw exception
@@ -484,7 +486,11 @@ class TrafficSimulatorWvcBase(gym.Env):
             psych_cum_wait[psych_cum_wait < 0] = 0
             psych_cum_wait = psych_cum_wait**2 * self.C
             cum_wait = psych_cum_wait.sum() / self.nodes[node_name].len_lanes_in
-            reward = -1 * (queue + self.mdp_dict['wait_reward_coef'] * cum_wait)
+            ns_ped_wait_time = self.nodes[node_name].ns_pedestrian_wait_time
+            ew_ped_wait_time = self.nodes[node_name].ew_pedestrian_wait_time
+            cum_ped_wait_time = ns_ped_wait_time + ew_ped_wait_time
+            reward = -1 * (queue + self.mdp_dict['wait_veh_reward_coef'] * cum_wait
+                           + self.mdp_dict['wait_ped_reward_coef'] * cum_ped_wait_time)
             reward = reward.clip(min=-3, max=3)
         return reward
 
@@ -514,3 +520,19 @@ class TrafficSimulatorWvcBase(gym.Env):
             speed_nodes.append(speed_mean)
         speed_nodes_mean = np.mean(speed_nodes)
         return speed_nodes_mean
+
+    def getPedestrianWaitNodeMean(self):
+        pedestrian_wait_nodes = []
+        for node_name in self.node_names:
+            pedestrian_wait = self.nodes[node_name].ns_pedestrian_wait_time + self.nodes[node_name].ew_pedestrian_wait_time
+            pedestrian_wait_nodes.append(pedestrian_wait)
+        pedestrian_wait_nodes_mean = np.mean(pedestrian_wait_nodes)
+        return pedestrian_wait_nodes_mean
+
+    @staticmethod
+    def _get_ped_wait_time(person_dict):
+        if len(person_dict) > 0:
+            sorted_person_dict = dict(sorted(person_dict.items(), key=lambda item:item[1], reverse=True))
+            return next(iter(sorted_person_dict.values()))
+        else:
+            return 0

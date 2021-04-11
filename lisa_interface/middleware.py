@@ -35,6 +35,7 @@ from deprecated import deprecated
 
 def configure_logger():
     timestamp = time.strftime("%Y-%m-%d")
+    logging.getLogger("urllib3").setLevel(logging.WARNING)
     _logger = logging.getLogger(__name__)
     _logger.setLevel(logging.INFO)
     Path("./logs").mkdir(parents=True, exist_ok=True)

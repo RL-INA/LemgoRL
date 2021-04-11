@@ -41,6 +41,8 @@ RESULTS_PATH = './results/'
 QUEUE_RESULTS_PATH = '/queue-results/'
 WAIT_RESULTS_PATH = '/wait-results/'
 SPEED_RESULTS_PATH = '/speed-results/'
+PHASE_WAVE_RESULT_PATH = '/phase-wave-results/'
+PEDESTRIAN_RESULT_PATH = '/pedestrian-wait-results/'
 
 
 def parse_args():
@@ -222,9 +224,13 @@ def evaluate(args):
     QUEUE_PATH = RESULTS_PATH + timestamp + QUEUE_RESULTS_PATH
     WAIT_PATH = RESULTS_PATH + timestamp + WAIT_RESULTS_PATH
     SPEED_PATH = RESULTS_PATH + timestamp + SPEED_RESULTS_PATH
+    PHASE_WAVE_PATH = RESULTS_PATH + timestamp + PHASE_WAVE_RESULT_PATH
+    PEDESTRIAN_PATH = RESULTS_PATH + timestamp + PEDESTRIAN_RESULT_PATH
     Path(QUEUE_PATH).mkdir(parents=True, exist_ok=True)
     Path(WAIT_PATH).mkdir(parents=True, exist_ok=True)
     Path(SPEED_PATH).mkdir(parents=True, exist_ok=True)
+    Path(PHASE_WAVE_PATH).mkdir(parents=True, exist_ok=True)
+    Path(PEDESTRIAN_PATH).mkdir(parents=True, exist_ok=True)
 
     algo_list = [args.algo]
     checkpoint_list = [args.checkpoint_nr]
@@ -232,8 +238,10 @@ def evaluate(args):
     queue_length_episodes_algos = []
     wait_time_episodes_algos = []
     speed_episodes_algos = []
+    pedestrian_episodes_algos = []
     std_err_que_algos = []
     std_err_wait_algos = []
+    std_err_pedestrian_algos = []
 
     if args.vc_mode:
         timesteps = 5400
@@ -261,10 +269,12 @@ def evaluate(args):
         queue_length_episodes = []
         wait_time_episodes = []
         speed_episodes = []
+        pedestrian_wait_episodes = []
 
         queue_length_episodes_std = []
         wait_time_episodes_std = []
         speed_episodes_std = []
+        pedestrian_wait_episodes_std = []
 
         CustomPlot.plot_figure()
 
@@ -275,6 +285,7 @@ def evaluate(args):
             queue_length_steps = []
             wait_time_steps = []
             speed_steps = []
+            pedestrian_wait_steps = []
             while not done:
                 action = agent.compute_action(obs)
                 obs, reward, done, info = env.step(action)
@@ -288,6 +299,9 @@ def evaluate(args):
                 speed_nodes_mean = env.getSpeedNodeMean()
                 speed_steps.append(speed_nodes_mean)
 
+                pedestrian_wait_nodes_mean = env.getPedestrianWaitNodeMean()
+                pedestrian_wait_steps.append(pedestrian_wait_nodes_mean)
+
                 step += 1
 
             queue_length_steps_mean = np.mean(queue_length_steps)
@@ -299,6 +313,9 @@ def evaluate(args):
             speed_steps_mean = np.mean(speed_steps)
             speed_episodes.append(speed_steps_mean)
 
+            pedestrian_wait_mean = np.mean(pedestrian_wait_steps)
+            pedestrian_wait_episodes.append(pedestrian_wait_mean)
+
             queue_length_steps_std = np.std(queue_length_steps)
             queue_length_episodes_std.append(queue_length_steps_std)
 
@@ -307,6 +324,9 @@ def evaluate(args):
 
             speed_steps_std = np.std(speed_steps)
             speed_episodes_std.append(speed_steps_std)
+
+            pedestrian_wait_std = np.std(pedestrian_wait_steps)
+            pedestrian_wait_episodes_std.append(pedestrian_wait_std)
 
             if args.verbose:
 
@@ -323,6 +343,10 @@ def evaluate(args):
                 CustomPlot.save_plot(f'{SPEED_PATH}Speed-{str(curr_episode)}.png',
                                      'Simulation time (sec)', 'Speed', f'Episode :{str(curr_episode)}',
                                      t, speed_steps, algo)
+
+                CustomPlot.save_plot(f'{PEDESTRIAN_PATH}Pedestrian-{str(curr_episode)}.png',
+                                'Simulation time (sec)', 'Pedestrian Wait Time', f'Episode:{str(curr_episode)}',
+                                t, pedestrian_wait_steps, algo)
 
             curr_episode += 1
 
@@ -366,6 +390,23 @@ def evaluate(args):
 
         speed_episodes_algos.append(speed_episodes)
 
+        if args.ci:
+            pedestrian_wait_episodes_std = np.array(pedestrian_wait_episodes_std)
+            pedestrian_wait_episodes = np.array(pedestrian_wait_episodes)
+            std_err_pedestrian_wait = pedestrian_wait_episodes_std / np.sqrt(timesteps)
+            std_err_pedestrian_wait *= 1.96
+            CustomPlot.save_ci_plot(f'{PEDESTRIAN_PATH}Pedestrian_Wait_time-Over_Episodes_CI_{args.algo}.png',
+                                    'Episode', 'Pedestrian Wait Time', 'Pedestrian Wait Time over Episodes',
+                                    t2, pedestrian_wait_episodes, pedestrian_wait_episodes-std_err_pedestrian_wait, pedestrian_wait_episodes
+                                    + std_err_pedestrian_wait, algo)
+            std_err_pedestrian_algos.append(std_err_pedestrian_wait)
+        else:
+            CustomPlot.save_plot(f'{PEDESTRIAN_PATH}Pedestrian_Wait_time-Over_Episodes_{args.algo}.png',
+                                 'Episode', 'Pedestrian Wait Time', 'Pedestrian Wait Time over Episodes',
+                                 t2, pedestrian_wait_episodes, algo)
+
+        pedestrian_episodes_algos.append(pedestrian_wait_episodes)
+
     if args.ci:
         CustomPlot.save_combined_ci_plot(f'{QUEUE_PATH}Queue-Length-Over_Episodes_CI_Combined.png',
                                          'Episode', 'Queue Length', 'Queue Length over Episodes',
@@ -387,6 +428,15 @@ def evaluate(args):
     CustomPlot.save_combined_plot(f'{SPEED_PATH}Avg-Speed-Over_Episodes_Combined.png',
                                   'Episode', 'Avg. Speed', 'Avg. Speed over Episodes',
                                   t2, speed_episodes_algos, algo_list)
+
+    if args.ci:
+        CustomPlot.save_combined_ci_plot(f'{PEDESTRIAN_PATH}Pedestrian-Wait-Time-Over_Episodes_CI_Combined.png',
+                                         'Episode', 'Pedestrian Wait Time', 'Pedestrian Wait Time Over Episodes',
+                                         t2, pedestrian_episodes_algos, algo_list, std_err_pedestrian_algos)
+    else:
+        CustomPlot.save_combined_plot(f'{PEDESTRIAN_PATH}Pedestrian-Wait-Time-Over_Episodes_Combined.png',
+                                      'Episode', 'Pedestrian Wait Time', 'Pedestrian Wait Time Over Episodes',
+                                      t2, pedestrian_episodes_algos, algo_list)
 
 
 def visualize(args):

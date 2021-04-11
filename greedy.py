@@ -1,5 +1,5 @@
 """
-Copyright 2021 Arthur MÃ¼ller and Vishal Rangras
+Copyright 2021 Arthur Müller and Vishal Rangras
 This file is part of LemgoRL.
 
 LemgoRL is free software: you can redistribute it and/or modify
@@ -329,7 +329,7 @@ class LongestQueueFirstPolicyLemgoWvc:
                             new_phase = curr_phase
 
             if self.pedestrian_control:
-                if new_phase == 7 and ns_pedestrian > 0:
+                if (new_phase == 7 and ns_pedestrian > 0) or (new_phase == 8 and ns_pedestrian > 10):
                     new_phase = 6
                 elif new_phase == 3 and ew_pedestrian > 0:
                     new_phase = 2
