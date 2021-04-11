@@ -1,5 +1,3 @@
-#!/usr/bin/python
-# -*- coding:utf-8 -*-
 """
 Copyright 2021 Arthur Müller and Vishal Rangras
 This file is part of LemgoRL.

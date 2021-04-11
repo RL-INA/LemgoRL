@@ -1,5 +1,5 @@
 """
-Copyright 2021 Arthur M�ller and Vishal Rangras
+Copyright 2021 Arthur Müller and Vishal Rangras
 This file is part of LemgoRL.
 
 LemgoRL is free software: you can redistribute it and/or modify
