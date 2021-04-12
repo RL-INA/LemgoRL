@@ -105,7 +105,7 @@ def parse_args():
     parser.add_argument('--sumo-connector',
                         type=str,
                         required=False,
-                        default='libsumo',
+                        default='traci',
                         help="Choose sumo-connector from traci and libsumo. Default is traci.",
                         choices=['traci', 'libsumo'])
 
