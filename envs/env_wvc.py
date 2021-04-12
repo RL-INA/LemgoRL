@@ -480,15 +480,15 @@ class TrafficSimulatorWvcBase(gym.Env):
         reward = 0
         # reward_mapping_function = True
         for node_name in self.node_names:
-            queue = np.array(self.nodes[node_name].cur_queue).sum()\
+            queue = np.array(self.nodes[node_name].cur_queue).sum() \
                     / self.nodes[node_name].len_lanes_in / self.mdp_dict['queue_norm']
-            psych_cum_wait = np.array(self.nodes[node_name].cur_cum_wait) - self.T0
-            psych_cum_wait[psych_cum_wait < 0] = 0
-            psych_cum_wait = psych_cum_wait**2 * self.C
-            cum_wait = psych_cum_wait.sum() / self.nodes[node_name].len_lanes_in
+
+            cum_wait = np.array(self.nodes[node_name].cur_cum_wait).sum() / self.nodes[node_name]. \
+                len_lanes_in / self.mdp_dict['wait_norm']
+
             ns_ped_wait_time = self.nodes[node_name].ns_pedestrian_wait_time
             ew_ped_wait_time = self.nodes[node_name].ew_pedestrian_wait_time
-            cum_ped_wait_time = ns_ped_wait_time + ew_ped_wait_time
+            cum_ped_wait_time = (ns_ped_wait_time + ew_ped_wait_time) / self.mdp_dict['ped_wait_norm']
             reward = -1 * (queue + self.mdp_dict['wait_veh_reward_coef'] * cum_wait
                            + self.mdp_dict['wait_ped_reward_coef'] * cum_ped_wait_time)
             reward = reward.clip(min=-3, max=3)
