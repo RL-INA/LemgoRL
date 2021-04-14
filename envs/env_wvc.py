@@ -220,6 +220,39 @@ class TrafficSimulatorWvcBase(gym.Env):
             node.cur_queue = []
             node.cur_avg_speed = []
             lanearea_detectors_in = []
+
+            # Pedestrian processing
+            edge_list = [':Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w0',
+                         ':Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w1',
+                         ':Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w2',
+                         ':Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_w3']
+
+            ns_cross_list = [':Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c0',
+                             ':Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c2']
+
+            ew_cross_list = [':Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c1',
+                             ':Junction_Gosebrede/Richard-Wagner-Strasse_EntruperWeg_c3']
+
+            if node.cur_phase_id == 6:
+                node.ns_pedestrian_wait_time = 0
+                node.ns_person_dict.clear()
+            elif node.cur_phase_id == 2:
+                node.ew_pedestrian_wait_time = 0
+                node.ew_person_dict.clear()
+
+            for edge in edge_list:
+                person_id_list = traci.edge.getLastStepPersonIDs(edge)
+                for person in person_id_list:
+                    person_speed = traci.person.getSpeed(person)
+                    if person_speed < 0.1:
+                        person_next_edge = traci.person.getNextEdge(person)
+                        if person_next_edge in ns_cross_list:
+                            node.ns_pedestrian_wait_time += 1
+                            break
+                        elif traci.person.getNextEdge(person) in ew_cross_list:
+                            node.ew_pedestrian_wait_time += 1
+                            break
+
             for lane_det_id in node.lanearea_detectors_in:
                 try:
 
@@ -278,32 +311,6 @@ class TrafficSimulatorWvcBase(gym.Env):
                         avg_speed += traci.lanearea.getLastStepMeanSpeed(self.owl322_lanes_dict[lane_det_id])
                         avg_speed = avg_speed/2
                     node.cur_avg_speed.append(avg_speed)
-
-                    # Edge processing
-                    edge_ns_list = ['Richard-Wagner-Strasse.E.1', 'Richard-Wagner-Strasse.W.6',
-                                    'Gosebrede.S.1', 'Gosebrede.N.8']
-
-                    edge_ew_list = ['EntruperWeg.N.4', 'EntruperWeg.S.8',
-                                    'EntruperWeg.S.9', 'EntruperWeg.N.3']
-
-                    if node.cur_phase_id == 6:
-                        node.ns_pedestrian_wait_time = 0
-                        node.ns_person_dict.clear()
-                    elif node.cur_phase_id == 2:
-                        node.ew_pedestrian_wait_time = 0
-                        node.ew_person_dict.clear()
-
-                    for edge in edge_ns_list:
-                        person_ns_id_list = traci.edge.getLastStepPersonIDs(edge)
-                        for person_ns in person_ns_id_list:
-                            node.ns_pedestrian_wait_time += 1
-                            break
-
-                    for edge in edge_ew_list:
-                        person_ew_id_list = traci.edge.getLastStepPersonIDs(edge)
-                        for person_ew in person_ew_id_list:
-                            node.ew_pedestrian_wait_time += 1
-                            break
 
                     # creating new list of lanearea detectors which doesn't throw exception
                     lanearea_detectors_in.append(lane_det_id)
