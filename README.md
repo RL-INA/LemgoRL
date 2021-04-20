@@ -96,9 +96,8 @@ The `main.py` script also supports the Evaluate Mode which can be used to evalua
 └───utils.py	# This script contains static methods to plot graphs for evaluation mode.
 ```
 
-#### Using the OWL322 Environment
+[//]: <> (#### Using the OWL322 Environment)
 
-`Write here about how to import and initialize the LemgoRL environment in code like Gym Environment`
 
 #### Contributing to this project
 Any contributions you make are greatly appreciated.
