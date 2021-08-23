@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 10/15/20 14:52:32 by Eclipse SUMO netedit Version 1.6.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="C:\Users\Lukas%20Schreckenberg\git\ki4lsa\sumo\Lemgo.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="C:\Users\Lukas%20Schreckenberg\git\ki4lsa\sumo\Lemgo.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-internal-links value="false"/>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+    <netedit>
+        <additional-files value="C:\Users\Lukas%20Schreckenberg\git\ki4lsa\sumo\Detectors.add.xml"/>
+    </netedit>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <e1Detector id="OWL322_e1_D011" lane="Richard-Wagner-Strasse.W.2_2" pos="262.00" freq="900.00" file="OWL322_e1_D011.xml"/>
+    <e1Detector id="OWL322_e1_D031" lane="Gosebrede.N.8_3" pos="15.53" freq="900.00" file="OWL322_e1_D031.xml"/>
+    <e1Detector id="OWL322_e1_D032" lane="Gosebrede.N.7_2" pos="117.85" freq="900.00" file="OWL322_e1_D032.xml"/>
+
+    <e2Detector id="OWL322_e2_V010" lane="Richard-Wagner-Strasse.W.6_2" pos="38.72" length="10.00" freq="900.00" file="OWL322_e2_V030.xml"/>
+    <e2Detector id="OWL322_e2_V030" lane="Gosebrede.N.8_2" pos="33.53" length="10.00" freq="900.00" file="OWL322_e2_V030.xml"/>
+    <e2Detector id="OWL322_e2_V210" lane="Richard-Wagner-Strasse.W.6_3" pos="38.72" length="10.00" freq="900.00" file="OWL322_e2_V210.xml"/>
+    <e2Detector id="OWL322_e2_V230" lane="Gosebrede.N.8_3" pos="33.53" length="10.00" freq="900.00" file="OWL322_e2_V230.xml"/>
+    <e3Detector id="OWL322_e3_V020" pos="2091.65,1458.00" freq="900.00" file="OWL322_e3_V020.xml">
+        <detEntry lane="EntruperWeg.N.2_3" pos="20.00"/>
+        <detEntry lane="EntruperWeg.N.2_2" pos="20.00"/>
+        <detExit lane="EntruperWeg.N.2_2" pos="30.00"/>
+        <detExit lane="EntruperWeg.N.2_3" pos="30.00"/>
+    </e3Detector>
+    <e3Detector id="OWL322_e3_V02R" pos="2091.28,1473.20" freq="900.00" file="OWL322_e3_V02R.xml">
+        <detEntry lane="EntruperWeg.N.3_3" pos="0.50"/>
+        <detEntry lane="EntruperWeg.N.3_2" pos="0.50"/>
+        <detEntry lane="EntruperWeg.N.3_1" pos="0.50"/>
+        <detExit lane="EntruperWeg.N.3_3" pos="4.70"/>
+        <detExit lane="EntruperWeg.N.3_2" pos="4.70"/>
+        <detExit lane="EntruperWeg.N.3_1" pos="4.70"/>
+    </e3Detector>
+    <e3Detector id="OWL322_e3_V040" pos="2065.12,1514.11" freq="900.00" file="e3Detector_16.xml">
+        <detEntry lane="EntruperWeg.S.7_2" pos="55.00"/>
+        <detEntry lane="EntruperWeg.S.7_3" pos="55.00"/>
+        <detExit lane="EntruperWeg.S.7_2" pos="65.00"/>
+        <detExit lane="EntruperWeg.S.7_3" pos="65.00"/>
+    </e3Detector>
+    <e3Detector id="OWL322_e3_V041" pos="2061.40,1558.42" freq="900.00" file="OWL322_e3_V041.xml">
+        <detEntry lane="EntruperWeg.S.7_3" pos="5.66"/>
+        <detEntry lane="EntruperWeg.S.7_2" pos="5.66"/>
+        <detExit lane="EntruperWeg.S.7_3" pos="15.66"/>
+        <detExit lane="EntruperWeg.S.7_2" pos="15.66"/>
+    </e3Detector>
+    <e3Detector id="OWL322_e3_V04R" pos="2064.78,1503.83" freq="900.00" file="e3Detector_15.xml">
+        <detEntry lane="EntruperWeg.S.8_3" pos="0.50"/>
+        <detEntry lane="EntruperWeg.S.8_2" pos="0.50"/>
+        <detEntry lane="EntruperWeg.S.8_1" pos="0.50"/>
+        <detExit lane="EntruperWeg.S.8_3" pos="4.70"/>
+        <detExit lane="EntruperWeg.S.8_2" pos="4.70"/>
+        <detExit lane="EntruperWeg.S.8_1" pos="4.70"/>
+    </e3Detector>
+</additional>

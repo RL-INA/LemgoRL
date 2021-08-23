@@ -158,8 +158,8 @@ def parse_args():
     subp_evaluate.add_argument('--algo_id', type=str, required=False, default='last',
                                help="ID to choose the parameters for algorithm "
                                     "in corresponding config-file. default=last")
-    subp_evaluate.add_argument('--checkpoint-nr', type=int, required=False, default=0,
-                               help="Which checkpoint-nr number from trained agents to use.",)
+    subp_evaluate.add_argument('--checkpoint-nr', type=int, required=False, action='append',
+                               help="Which checkpoint-nr number from trained agents to use.", )
     subp_evaluate.add_argument('--mdp_sumo_id', type=str, required=False, default='last',
                                help="ID to choose the parameters for MDP and "
                                     "sumo in corresponding config-file. default=last")
