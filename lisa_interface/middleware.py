@@ -1,5 +1,5 @@
 """
-Copyright 2021 Arthur MÃ¼ller and Vishal Rangras
+Copyright 2021 Arthur Müller and Vishal Rangras
 This file is part of LemgoRL.
 
 LemgoRL is free software: you can redistribute it and/or modify
@@ -31,6 +31,8 @@ from pathlib import Path
 import xml.dom.minidom
 from lisa_interface.model import ControllerUnit, SumoOmtcDetector, SumoOmtcVariable, SumoOmtcSignalGroup
 from deprecated import deprecated
+from sys import platform
+import os
 
 
 def configure_logger():
@@ -144,12 +146,11 @@ class LisaInterfaceManager:
     PutMessageResponsePattern = re.compile(r"^([0-9]+):(\{.+\})(\{.+\})(\{.+\})(\{.*\})(\{.*\})(\{.*\})$",
                                            flags=re.DOTALL)
 
-    controlOptions = {"controlMode": 5, "sp": 11, "va": 2, "iv": 2, "oev": 2, "coordinated": 2}
     detString = ""
     msgTypeInit = 'Init'
     msgTypeRun = 'Run'
 
-    def __init__(self, host, port, server_path, data_dir, controlled_nodes, lisa_cfg):
+    def __init__(self, host, port, server_path, data_dir, controlled_nodes, lisa_cfg, adaptive=None):
         self.host = host
         self.port = port
         self.server_path = server_path
@@ -167,20 +168,34 @@ class LisaInterfaceManager:
         self.lisa_sumo_sgr_dict = {}
         self.lisa_cfg = lisa_cfg
         self.pedestrian_demand = ['F', 'F', 'F', 'F']
+        if adaptive:
+            self.controlOptions = {"controlMode": 5, "sp": 4, "va": 2, "iv": 2, "oev": 2, "coordinated": 2}
+        else:
+            self.controlOptions = {"controlMode": 5, "sp": 11, "va": 2, "iv": 2, "oev": 2, "coordinated": 2}
 
-    def __start_oml_fg_server(self, invisible=True):
+    def start_oml_fg_server(self, invisible=True):
         java_exec = "javaw.exe" if invisible else "java.exe"
-        java_args = [java_exec]
+        if platform == "linux":
+            java_exec = "java"
+            java_args = ["nohup", java_exec]
+        else:
+            java_args = [java_exec]
         java_args.extend(["-jar", "-Xmx1024m", "-Xms512m", self.server_path])
 
         # check for already running process which might block the port?
+        print("Checking if process needs to be killed...")
         for proc in psutil.process_iter():
             # Check if process name contains the given name string.
             if java_exec in proc.name().lower():
+                print(f"Killing the process: {proc.name()}")
                 proc.kill()
         try:
-            self.oml_fg_server = subprocess.Popen(java_args, creationflags=subprocess.CREATE_NEW_PROCESS_GROUP)
-            time.sleep(5)
+            # 512 is the code for CREATE_NEW_PROCESS_GROUP, since this variable is not available in Linux
+            if platform == "linux":
+                self.oml_fg_server = subprocess.Popen(java_args, preexec_fn=os.setpgrp)
+            else:
+                self.oml_fg_server = subprocess.Popen(java_args, creationflags=subprocess.CREATE_NEW_PROCESS_GROUP)
+            time.sleep(1)
         except PermissionError as pe:
             logging.error("An exception occurred. {0}".format(pe))
             exit(-1)
@@ -188,7 +203,7 @@ class LisaInterfaceManager:
     def initialize_lisa_context(self, phase_dict):
 
         # 0. Start OmlFgServer
-        self.__start_oml_fg_server()
+        # self.__start_oml_fg_server()
 
         # 1. Set Data Dir
         data_dir_body = self.Messages["MSG_SetDataDirRequest"] % self.data_dir
@@ -218,7 +233,7 @@ class LisaInterfaceManager:
 
             # 3. Remove Tasks if the list is not empty
             # removeTask (remove existing tasks before starting a new one)
-            for task_id in task_ids:
+            for task_id in task_id_list:
                 remove_task_body = self.Messages["MSG_RemoveTaskRequest"] % task_id
                 remove_task_response = self.__invoke_service(self.MessageToService["MSG_RemoveTaskRequest"],
                                                              remove_task_body)
@@ -261,7 +276,6 @@ class LisaInterfaceManager:
             ap_val = self.__calc_ap_vector(phase_dict[controlled_node], self.pedestrian_demand, sim_time)
             put_message_body = self.__prepare_put_message_body(controller_unit, sim_time, self.msgTypeInit, ap_val)
             put_message_response = self.__invoke_service(self.MessageToService["MSG_Message"], put_message_body)
-            logger.debug('<Put Message> Response received : %s' % put_message_response)
             self.__process_put_message_response(put_message_response, controller_unit)
             self.controller_unit_dict[controlled_node] = controller_unit
 
@@ -272,51 +286,54 @@ class LisaInterfaceManager:
         ap_val = self.__calc_ap_vector(phase, pedestrian_demand, sim_time)
         put_message_body = self.__prepare_put_message_body(controller_unit, sim_time, self.msgTypeRun, ap_val)
         put_message_response = self.__invoke_service(self.MessageToService["MSG_Message"], put_message_body)
+        return self.__process_put_message_response(put_message_response, controller_unit)
+
+    def get_sgr_states_det(self, controlled_node, det_string, pedestrian_demand, sim_time):
+        if pedestrian_demand is None:
+            pedestrian_demand = self.pedestrian_demand
+        controller_unit = self.controller_unit_dict[controlled_node]
+        ap_val = f"{sim_time}"
+        put_message_body = self.__prepare_put_message_body(controller_unit, sim_time,
+                                                           self.msgTypeRun, ap_val, det_string)
+        put_message_response = self.__invoke_service(self.MessageToService["MSG_Message"], put_message_body)
         logger.debug('<Put Message> Response received : %s' % put_message_response)
         return self.__process_put_message_response(put_message_response, controller_unit)
 
     def __calc_ap_vector(self, phase, pedestrian_demand, sim_sec):
-        logger.debug(f"The desired phase is: {phase}")
-        logger.debug(f"The computed lisa+ phase wish is :{self.DESIRED_PH_TO_LISA_PH_MAP[phase]}")
-        logger.debug(f"The pedestrian demand vector is :{pedestrian_demand}")
         ap_vector = f'{sim_sec}/{self.DESIRED_PH_TO_LISA_PH_MAP[phase]}/{pedestrian_demand[0]}' \
                     f'/{pedestrian_demand[1]}/{pedestrian_demand[2]}/{pedestrian_demand[3]}'
-        logger.debug(f"The computed ap_vector is :{ap_vector}")
-
         return ap_vector
 
-    def __prepare_put_message_body(self, controller_unit, sim_time, msg_type, ap_val):
+    def __prepare_put_message_body(self, controller_unit, sim_time, msg_type, ap_val, det_string=""):
         msg = "%d %d %d %d:%d{\"%s\"}{%d;%d;%d;%d;%d;%d;%d;%d}{%s}{}{%s}{}" % \
               (controller_unit.taskID, sim_time, 1, 0, sim_time, msg_type, self.controlOptions["controlMode"], 1,
                self.controlOptions["sp"], 1, self.controlOptions["va"], self.controlOptions["iv"],
-               self.controlOptions["oev"], self.controlOptions["coordinated"], self.detString, ap_val)
-        logger.debug(f"Lisa+ putMessage Request: {msg}")
+               self.controlOptions["oev"], self.controlOptions["coordinated"], det_string, ap_val)
         return self.Messages["MSG_Message"] % msg
 
     def __process_put_message_response(self, put_message_response, controller_unit):
         dom_tree = xml.dom.minidom.parseString(put_message_response)
         internal_cmd = dom_tree.documentElement.firstChild.nodeValue
-        logger.debug(f"Lisa+ putMessage Response: {internal_cmd}")
 
-        curly_braces = re.search(self.PutMessageResponsePattern, internal_cmd)
-        if curly_braces:
-            try:
-                sec_string, cycle_sec_string, flag_string, signal_states_string, \
-                    output_string, phases_string, ap_string = curly_braces.group(1, 2, 3, 4, 5, 6, 7)
+        try:
+            curly_braces = re.search(self.PutMessageResponsePattern, internal_cmd)
 
-                signal_states_string = signal_states_string[1:-1]
-                sumo_signals_str = self.__map_lisa_signals_to_sumo(signal_states_string, controller_unit)
-                phases_string = phases_string[1:-1]
-                output_string = output_string[1:-1]
-                ap_string = ap_string[1:-1]
-                logger.debug(f"Lisa Signal States: {signal_states_string}")
-                logger.debug(f"Sumo Signal States: {sumo_signals_str}")
-                logger.debug(f"Phase : {phases_string}")
-                logger.debug(f"Output String: {output_string}")
-                logger.debug(f"AP Values : {ap_string}")
-                return sumo_signals_str, phases_string, output_string, ap_string
-            except IndexError as ie:
-                raise ie
+            if curly_braces:
+                try:
+                    sec_string, cycle_sec_string, flag_string, signal_states_string, \
+                        output_string, phases_string, ap_string = curly_braces.group(1, 2, 3, 4, 5, 6, 7)
+
+                    signal_states_string = signal_states_string[1:-1]
+                    sumo_signals_str = self.__map_lisa_signals_to_sumo(signal_states_string, controller_unit)
+                    phases_string = phases_string[1:-1]
+                    output_string = output_string[1:-1]
+                    ap_string = ap_string[1:-1]
+                    return sumo_signals_str, phases_string, output_string, ap_string
+                except IndexError as ie:
+                    raise ie
+        except Exception as e:
+            logger.error("Regex error occurred while processing middleware response")
+            logger.exception(e)
 
     @staticmethod
     def __init_lisa_sumo_sgr_mapping(controller_unit):
@@ -505,7 +522,7 @@ class LisaInterfaceManager:
                 else:
                     connected = True
             except Exception as e:
-                logger.error("An exception occurred. {0}".format(e))
+                logger.exception("An exception occurred. {0}".format(e))
                 try_count += 1
                 time.sleep(3)
         return response
