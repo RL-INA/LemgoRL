@@ -33,13 +33,26 @@ In order for the Traffic Signal Logic Unit to work, the **Lisa+ OmlFgServer.jar*
 2. Install Anaconda / Miniconda from https://www.anaconda.com/products/individual
 3. In anaconda prompt, execute the command `conda env create -f environment.yml`. This command will create an anaconda environment "LemgoRL".
 4. Activate the anaconda environment with the command `conda activate LemgoRL` for Windows or `activate LemgoRL` for Linux/Unix/Mac.
-5. Create a directory `lisa_vissim_addon` in root directory of this project and place the OmlFgServer.jar procured from the company **Schlothauer & Wauer** in this directory.
+5. Place the OmlFgServer.jar procured from the company **Schlothauer & Wauer** in directory path: `lisa_vissim_addon/59081`.
 
 #### Visualize Mode
 
-This source code comes with `main.py` script as a test script which can be used to launch the LemgoRL simulation model in SUMO-GUI mode and observe the control of intersection by greedy policy. To do so, following command needs to be executed from the root directory of this project:
+This source code comes with `main.py` script as a test script which can be used to launch the LemgoRL simulation model in SUMO-GUI mode and observe the control of intersection by greedy policy. To visualize the greedy policy, following command needs to be executed from the root directory of this project:
 
 `python main.py visualize`
+
+To visualize the PPO Policy with the pretrained checkpoint stored inside `./agents_runs/owl322/PPO`
+
+`python main.py visualize --algo=PPO --checkpoint-nr=530`
+
+The available policies that can be visualized or evaluated are:
+
+1. greedy
+2. greedy-wave 
+3. fixed 
+4. random
+5. adaptive
+6. PPO - RL Policy
 
 Following are the screenshots of SUMO-GUI showing the intersection OWL322 of Lemgo with real-world traffic demand of cars, heavy vehicles and pedestrians.
 
@@ -54,6 +67,10 @@ Following are the screenshots of SUMO-GUI showing the intersection OWL322 of Lem
 The `main.py` script also supports the Evaluate Mode which can be used to evaluate queue length , avg. speed and wait time w.r.t to episodes. By default, the evaluate mode runs for 5 episodes on greedy policy and produces output in the **results** directory. The number of episodes can be changed by passing command argument `--episodes N` where N represents number of episodes to be evaluated. The evaluate mode also supports verbose evaluation and reporting in which queue length, avg. speed and wait time are reported w.r.t. to simulation second for each episode. To turn this on, the command argument `--verbose True` should be passed. In its default form, the evaluate mode can be executed as follows:
 
 `python main.py evaluate`
+
+A combination of policies can be evaluated altogether using command as follow:
+
+`python main.py evaluate --algo=greedy-wave --checkpoint-nr=0 --algo=greedy --checkpoint-nr=0 --algo=adaptive --checkpoint-nr=0 --algo=fixed --checkpoint-nr=0 --algo=PPO --checkpoint-nr=530 --episodes=5 --ci=True`
 
 ![alt text](./evaluation-sample.png "Evaluation Sample")
 
