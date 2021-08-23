@@ -24,6 +24,9 @@ and the LongestQueueFirst policy for one-intersection environment.
 
 import matplotlib
 import matplotlib.pyplot as plt
+import logging
+import time
+from pathlib import Path
 
 matplotlib.use("agg")
 
@@ -31,36 +34,36 @@ matplotlib.use("agg")
 class CustomPlot:
 
     @staticmethod
-    def save_combined_plot(path, xlabel, ylabel, plot_label, t, y_data_list, algo_list):
+    def save_combined_plot(path, xlabel, ylabel, plot_label, t, y_data_list, algo_list, checkpoint_list):
         fig = plt.figure()
         ax = fig.gca()
 
-        for y, algo in zip(y_data_list, algo_list):
+        for y, algo, checkpoint in zip(y_data_list, algo_list, checkpoint_list):
             ax.plot(t, y, label=algo)
 
         ax.legend()
         ax.set_xlabel(xlabel)
         ax.set_ylabel(ylabel)
-        ax.set_title(plot_label)
         fig.savefig(path, dpi=300)
 
     @staticmethod
-    def save_combined_ci_plot(path, xlabel, ylabel, plot_label, t, y_data_list, algo_list, std_err_list, alpha=0.15):
+    def save_combined_ci_plot(path, xlabel, ylabel, plot_label, t, y_data_list, algo_list, checkpoint_list, std_err_list, alpha=0.15):
         fig = plt.figure()
         ax = fig.gca()
 
-        for ydata, std_err, algo in zip(y_data_list, std_err_list, algo_list):
+        for ydata, std_err, algo, checkpoint in zip(y_data_list, std_err_list, algo_list, checkpoint_list):
             y_lb = ydata-std_err
             y_ub = ydata+std_err
-            y_lb[y_lb < 0] = 0.0
             ax.fill_between(t, y_ub, y_lb, alpha=alpha)
             ax.plot(t, ydata, label=algo)
 
         ax.legend()
         ax.set_xlabel(xlabel)
         ax.set_ylabel(ylabel)
-        ax.set_title(plot_label)
-        fig.savefig(path, dpi=300)
+
+        if ylabel == 'Pedestrian Wait Time (s)':
+            ax.set_ylim([0, 50])
+        fig.savefig(path, dpi=300, bbox_inches='tight')
 
     @staticmethod
     def save_plot(path, xlabel, ylabel, plot_label, t, y_data, algo):
@@ -74,7 +77,6 @@ class CustomPlot:
 
     @staticmethod
     def save_ci_plot(path, xlabel, ylabel, plot_label, t, ydata, lb, ub, algo, alpha=0.15):
-        lb[lb < 0] = 0.0
         plt.fill_between(t, ub, lb, alpha=alpha)
         plt.plot(t, ydata, label=algo)
         plt.legend()
@@ -87,3 +89,25 @@ class CustomPlot:
     @staticmethod
     def plot_figure():
         plt.figure()
+
+    @staticmethod
+    def plot_scatter_plot(path, xlabel, ylabel, plot_label, t, ydata):
+        plt.scatter(t, ydata)
+        plt.legend()
+        plt.xlabel(xlabel)
+        plt.ylabel(ylabel)
+        plt.title(plot_label)
+        plt.savefig(path, dpi=300)
+        plt.clf()
+
+    @staticmethod
+    def add_to_scatter_plot(t, ydata, ylabel, index):
+        ax = plt.subplot(int('21'+str(index)))
+        ax.set_ylabel(ylabel=ylabel)
+        plt.scatter(t, ydata)
+
+    @staticmethod
+    def save_scatter_plot(path, plot_label, xlabel):
+        plt.xlabel(xlabel)
+        plt.savefig(path, dpi=300)
+        plt.clf()
