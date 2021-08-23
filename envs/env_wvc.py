@@ -1,5 +1,5 @@
 """
-Copyright 2021 Arthur Müller and Vishal Rangras
+Copyright 2021 Arthur Mueller and Vishal Rangras
 This file is part of LemgoRL.
 
 LemgoRL is free software: you can redistribute it and/or modify
@@ -113,7 +113,7 @@ class TrafficSimulatorWvcBase(gym.Env):
         self.sumo_dict['seed'] += worker_index * 1000
 
         if self.env_config['env'] == 'lemgo' or self.env_config['env'] == 'owl322':
-            self.controlled_nodes = sorted(env_config['controlled_nodes'])
+            self.controlled_nodes = sorted([env_config['controlled_nodes']])
 
         action_space = 0
         obs_space = 0

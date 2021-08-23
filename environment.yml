@@ -1,4 +1,4 @@
-name: ki4lsa
+name: lemgoRL
 channels:
     - conda-forge
 dependencies:
@@ -11,6 +11,7 @@ dependencies:
     - flask
     - flask-cors
     - setproctitle
+    - pip
     - pip:
         - ray
         - ray[tune]

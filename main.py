@@ -1,5 +1,5 @@
 """
-Copyright 2021 Arthur Müller and Vishal Rangras
+Copyright 2021 Arthur Mueller and Vishal Rangras
 This file is part of LemgoRL.
 
 LemgoRL is free software: you can redistribute it and/or modify
@@ -121,7 +121,7 @@ def parse_args():
     parser.add_argument('--server-path',
                         type=str,
                         required=False,
-                        default='./lisa_vissim_addon/OmlFgServer.jar',
+                        default='./lisa_vissim_addon',
                         help="Location for Lisa+ Virtual Controller server path")
     parser.add_argument('--data-dir',
                         type=str,
@@ -139,6 +139,11 @@ def parse_args():
                         default='traci',
                         help="Choose sumo-connector from traci and libsumo. Default is traci.",
                         choices=['traci', 'libsumo'])
+    parser.add_argument('--starting-port',
+                        type=int,
+                        required=False,
+                        default=59081,
+                        help="Starting port number for lisa+ instances")
 
     subparsers = parser.add_subparsers(dest='modus',
                                        help="train, evaluate or visualize")

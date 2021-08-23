@@ -368,7 +368,7 @@ class LongestQueueFirstPolicyLemgoWvc:
 
     def __init__(self, env_config):
 
-        self.controlled_nodes = sorted(env_config['controlled_nodes'])
+        self.controlled_nodes = sorted([env_config['controlled_nodes']])
         self.node_phase_demand_dict = {x: {'N_S': 0, 'E_W': 0} for x in self.controlled_nodes}
         self.pedestrian_control = True
 
