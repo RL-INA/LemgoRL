@@ -155,6 +155,9 @@ def parse_args():
                                required=False,
                                help="Algorithm to evaluate the agent. default=greedy. "
                                     "Choices are from 'greedy','greedy-wave', 'PPO', 'fixed', 'random', 'adaptive'")
+    subp_evaluate.add_argument('--algo_id', type=str, required=False, default='last',
+                               help="ID to choose the parameters for algorithm "
+                                    "in corresponding config-file. default=last")
     subp_evaluate.add_argument('--checkpoint-nr', type=int, required=False, default=0,
                                help="Which checkpoint-nr number from trained agents to use.",)
     subp_evaluate.add_argument('--mdp_sumo_id', type=str, required=False, default='last',
@@ -177,6 +180,8 @@ def parse_args():
     subp_vis.add_argument('--algo', type=str, required=False, default='greedy',
                           choices=['PPO', 'greedy','greedy-wave', 'fixed', 'random', 'adaptive'],
                           help="LemgoRL currently supports greedy policy as default algorithm.")
+    subp_vis.add_argument('--algo_id', type=str, required=False, default='last',
+                          help="ID to choose the parameters for algorithm in corresponding config-file. default=last")
     subp_vis.add_argument('--mdp_sumo_id', type=str, required=False, default='last',
                           help="ID to choose the parameters for MDP and sumo in "
                                "corresponding config-file. default=last")
@@ -316,8 +321,7 @@ def parse_args_and_init_agent_env(args):
 
         if args.modus == 'evaluate' or args.modus == 'visualize':
             logger.info(f'Using checkpoint {args.checkpoint_nr} to restore agent from.')
-            agent.restore(f'./agents_runs/{args.env}/{args.algo}/checkpoint_{args.checkpoint_nr}'
-                          f'/checkpoint-{args.checkpoint_nr}')
+            agent.restore(f'./agents_runs/{args.env}/{args.algo}/checkpoint_{args.checkpoint_nr}/checkpoint-{args.checkpoint_nr}')
 
     return agent, env_config, algo_config
 

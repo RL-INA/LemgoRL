@@ -5,7 +5,7 @@ dependencies:
     - python=3.6
     - bokeh
     - ipywidgets=6.0.0
-    - tensorflow==1.14.0
+    - tensorflow==2.5.0
     - psutil
     - nbserverproxy
     - flask
@@ -13,7 +13,8 @@ dependencies:
     - setproctitle
     - pip
     - pip:
-        - ray
+        - ray==1.4.1
+        - ray[default]
         - ray[tune]
         - ray[rllib]
         - ray[debug]
