@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+   <input>
+       <net-file value="sumo.net.xml"/>
+       <!-- <route-files value="vehicle_demand.rou.xml"/>  -->
+	   <!-- <route-files value="flows.rou.xml"/>  -->
+	   <!-- pedestrian_flows.rou.xml -->
+	   <route-files value=" BusRoutes_City.rou.xml, vehicle_types.rou.xml, od_flows.rou.xml, pedestrian_flows.rou.xml"/>
+<!-- pedestrian_demand.rou.xml	    -->
+	   <!-- flows.rou.xml, -->
+	   <!-- ,Lemgo_manual.rou.xml -->
+	   <additional-files value="Detectors.add.xml, sumo.add.xml, taz.xml"/>
+	   <!--<additional-files value="Lemgo.tll.xml,"/>-->
+   </input>
+<time>
+       <begin value="15:00:00"/>					<!-- default: 0, value in seconds or in hh:mm:ss-->
+	   <end value="16:10:00"/>					<!-- default: -1(Simulation runs till all vehicles have left the net), value in seconds or in hh:mm:ss-->
+   </time>
+   <processing>
+    <lateral-resolution value="0.64" />			<!-- default: -1,    if set the sublane module is activated-->
+	<collision.check-junctions value="false" /> <!-- default: false, if set true alot of collisions occur--> 
+	<collision.mingap-factor value="0.5" />     <!-- default: 2.5--> 
+	<time-to-teleport value="300"/>			<!-- default: 300-->
+   </processing>
+   <output>
+		<output-prefix value="Simulation Output" />
+		<summary-output value="_Summary.xml" />
+		<lanechange-output value="_Lanechange-output.xml"/>
+		<human-readable-time value="true"/>		<!-- default: false-->
+	</output>
+	<report>
+        <verbose value="false"/>
+        <duration-log.statistics value="true"/>
+		<log value="_Log.log"/>
+	</report>
+	<gui_only>
+	  <start value="true"/>
+	<!--  <quit-on-end value="true"/>-->
+	</gui_only>
+</configuration>
