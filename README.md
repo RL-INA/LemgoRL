@@ -151,7 +151,7 @@ project and was supported by the
 German Federal Ministry of Transport and Digital Infrastructure (BMVI).
 ![alt text](./Logo_KI4LSA.png)
 ![alt text](./Logo_BMVI.jpg)
-![alt text](./mFUND_Logo_sRGB.PNG)
+![alt text](./Logo_mFUND_sRGB.PNG)
 
 
 
