@@ -150,7 +150,8 @@ This work is part of the [KI4LSA](https://www.iosb-ina.fraunhofer.de/de/geschaef
 project and was supported by the 
 German Federal Ministry of Transport and Digital Infrastructure (BMVI).
 ![alt text](./Logo_KI4LSA.png)
-![alt text](./Logo_BMVI.jpg )
+![alt text](./Logo_BMVI.jpg)
+![alt text](./Logo_mFUND.jpg )
 
 
 
