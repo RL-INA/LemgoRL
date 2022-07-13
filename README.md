@@ -132,13 +132,20 @@ Distributed under the GNU GPL V3.0 License.
 If you want to cite this work, please use the following BibTex entry:
 
 `
-@misc{müller2021lemgorl,
- title={LemgoRL: An open-source Benchmark Tool to Train Reinforcement Learning Agents for Traffic Signal Control in a real-world simulation scenario}, author={Arthur Müller and Vishal Rangras and Georg Schnittker and Michael Waldmann and Maxim Friesen and Tobias Ferfers and Lukas Schreckenberg and Florian Hufen and Jürgen Jasperneite and Marco Wiering},
-year={2021},
-eprint={2103.16223},
-archivePrefix={arXiv},
-primaryClass={cs.LG}
-}`
+@inproceedings{LemgoRL,
+author = {Müller, Arthur and Rangras, Vishal and Ferfers, Tobias and Hufen, Florian and Schreckenberg, Lukas and Jasperneite, Jürgen and Schnittker, Georg and Waldmann, Michael and Friesen, Maxim and Wiering, Marco},
+booktitle = {2021 20th IEEE International Conference on Machine Learning and Applications (ICMLA)},
+doi = {10.1109/icmla52953.2021.00085},
+eprint = {2103.16223},
+month = {dec},
+pages = {507--514},
+publisher = {IEEE},
+title = {{Towards Real-World Deployment of Reinforcement Learning for Traffic Signal Control}},
+url = {https://ieeexplore.ieee.org/document/9680067/},
+year = {2022}
+}
+`
+
 
 #### Contact
 Arthur Müller: arthur.mueller@iosb-ina.fraunhofer.de   
